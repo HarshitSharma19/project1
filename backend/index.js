@@ -3,6 +3,7 @@ import Express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
+import cors from "cors";
 import { AdminLogin } from "./Routes/AdminLogin.js";
 import { Auth } from "./Middleware/Auth.js";
 /*---------------------------------------------------------*/
@@ -25,6 +26,7 @@ if(ConnStatus){
     const App = Express();
     /*ADMIN LOGIN PENDING*/
     App.use(bodyParser.json())
+    App.use(cors({origin: "*"}))
     App.use("/", AdminLogin)
     /*ADMIN LOGIN DONE*/
     App.get("/Admin", Auth ,(req , res)=>{
