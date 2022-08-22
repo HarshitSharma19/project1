@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar'
 // import Card from './Components/Card'
 // import SideNav from './Components/SideNav.jsx'
 import Products from './Pages/Accessories.jsx'
+import FooterDetails from './Components/FooterDetails.jsx'
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
     <Card/> */}
     {/* <SideNav/> */}
     <Products/>
+    <FooterDetails/>  
     </>
   )
 }
