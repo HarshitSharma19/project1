@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import cors from "cors";
 import { AdminLogin } from "./Routes/AdminLogin.js";
+import { UserLogin } from "./Routes/UserLogin.js";
 import { Auth } from "./Middleware/Auth.js";
 /*---------------------------------------------------------*/
 /*---------------------------------------------------------*/
@@ -27,11 +28,14 @@ if(ConnStatus){
     /*ADMIN LOGIN PENDING*/
     App.use(bodyParser.json())
     App.use(cors({origin: "*"}))
-    App.use("/", AdminLogin)
+    App.use("/admin-panel", AdminLogin)
     /*ADMIN LOGIN DONE*/
-    App.get("/Admin", Auth ,(req , res)=>{
+    App.get("/admin-panel/admin", Auth ,(req , res)=>{
         res.send(req.User);
     })
+    /*USER LOGIN PENDING*/
+    App.use("/user", UserLogin)
+    /*USER LOGIN DONE*/
     App.listen(process.env.PORT , ()=>{
         console.log(`Server is running on http://localhost:${process.env.PORT}`)
     })
