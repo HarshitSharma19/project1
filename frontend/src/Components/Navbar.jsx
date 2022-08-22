@@ -1,20 +1,21 @@
 import React from 'react'
 import download from '../Images/iSHOP Logo.svg'
+import Container from './Container.jsx'
 
 
 export default function Navbar() {
   return (
-    <>
-    <div className='container ' >
-    <div className='w-screen  flex justify-center my-5 ' >
+    <Container>
+    <div  >
+    <div className=' flex justify-center my-5 ' >
             <div className=''>
                <img className='justify-center'  src={download} alt="" />
              </div>
     </div>
-     <div  className='container '>
+     <div >
      <ul className='flex justify-center' >
-         <li className='p-6' >HOME</li>
-         <li className='p-6 relative ' >STORE
+         <li className='p-6 cursor-pointer' >HOME</li>
+         <li className='p-6 cursor-pointer relative ' >STORE
          <div style={{width:"800px", margin:"auto"}} className=' hidden	 absolute text-center    border-2 border-indigo-500/100 text-black flex justify-between	 bg-white'>
                      
                         <ul className='w-300 border-2 leading-8 border-indigo-500/100 ' >
@@ -38,7 +39,7 @@ export default function Navbar() {
                           <li> Display & Graphic</li>
                           <li> Fitness & Sport</li>
                           <li> Headphones</li>
-                          <li>  HealhKit</li>
+                          <li> HealthKit</li>
                         </ul>
                         <ul className='w-300 border-2 leading-8 border-indigo-500/100 ' >
                         <li className='font-bold' >Category</li>
@@ -48,14 +49,14 @@ export default function Navbar() {
                         </ul>
                        </div>
          </li>
-         <li className='p-6' >IPHONE</li>
-         <li className='p-6' >IPAD</li>
-         <li className='p-6' >MACBOOK</li>
-         <li className='p-6' >ACCESORIES</li>
+         <li className='p-6 cursor-pointer'  >IPHONE</li>
+         <li className='p-6 cursor-pointer' >IPAD</li>
+         <li className='p-6 cursor-pointer' >MACBOOK</li>
+         <li className='p-6 cursor-pointer' >ACCESORIES</li>
      </ul>
   </div>
   </div>
   
-  </>
+  </Container>
   )
 }
