@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Container(props) {
     return (
-        <div style={{maxWidth:"1600px",margin:"auto"}}>
+        <div className='max-w-[1280px] mx-auto'>
             {props.children}
         </div>
     )
