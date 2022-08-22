@@ -11,7 +11,7 @@ export default function Products() {
             <div className="mt-5">
             <SideNav/>
             </div>
-            <div className="p-5 mt-10" style={{width:"1200px"}}>
+            <div className="p-5 mt-10" style={{width:"1360px"}}>
                 <Banner />
                 <Card/>
             </div>
