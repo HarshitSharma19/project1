@@ -1,5 +1,5 @@
 import React from 'react'
-import applemc from '../Images/Apple Macbook Air.png'
+import applemc from './Images/Apple Macbook Air.png'
 import Container from './Container'
 
 export default function Card() {
