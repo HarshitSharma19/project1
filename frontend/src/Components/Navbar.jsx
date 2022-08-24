@@ -1,28 +1,29 @@
-import React from 'react'
-import download from '../Images/iSHOP Logo.svg'
+
+import React, { useState } from 'react';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+// import download from './Images/iSHOP Logo.svg'
 import Container from './Container.jsx'
 
+const Navbar = () => {
+  const [nav, setNav] = useState(false);
 
-export default function Navbar() {
+  const handleNav = () => {
+    setNav(!nav);
+  };
+
+
   return (
+    
     <Container>
-    <div >
-    <div className=' flex justify-center my-5 ' >
-            <div className=''>
-               <img className='justify-center'  src={download} alt="" />
-             </div>
-    </div>
+ 
+
      <div >
-     <ul className='flex justify-center' >
-
-         <li className='p-6' >HOME</li>
-         <li className='p-6 relative ' >STORE
-         <div style={{width:"800px", margin:"auto"}} className='hidden absolute text-centeborder-2 border-indigo-500/100 text-black flex justify-between	 bg-white'>
-
-       
-
+     <ul className='flex hidden md:flex justify-center' >
+         <li className='p-6 cursor-pointer' >HOME</li>
+         <li className='p-6 cursor-pointer relative ' >STORE
+         <div style={{width:"800px", margin:"auto"}} className=' hidden	 absolute text-center    border-2 border-indigo-500/100 text-black flex justify-between	 bg-white'>
                      
-                        <ul className='w-300 border-2 leading-8 border-indigo-500/100 ' >
+                        <ul className='w-300 hidden md:flex border-2 leading-8 border-indigo-500/100 ' >
                           <li className='font-bold' >Accessories</li>
                           <li>AirPort & Wireless</li>
                           <li>AppleCare Bags</li>
@@ -59,8 +60,24 @@ export default function Navbar() {
          <li className='p-6 cursor-pointer' >ACCESORIES</li>
      </ul>
   </div>
-  </div>
-  
-  </Container>
+  <div className=' flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-b'>
+      <div onClick={handleNav} className='block md:hidden'>
+          {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20} />}
+      </div>
+      <ul className={nav ? 'fixed text-center left-0 top-60  w-[100%] h-full border-r  ease-in-out duration-500' : 'ease-in-out duration-500 fixed left-[-100%]'}>
+          <li className='p-4 border-b border-gray-600'>Home</li>
+          <li className='p-4 border-b border-gray-600'>STORE</li>
+          <li className='p-4 border-b border-gray-600'>IPHONE</li>
+          <li className='p-4 border-b border-gray-600'>IPAD</li>
+          <li className='p-4 border-b border-gray-600'>MACBOOK</li>
+          <li className='p-4 border-b border-gray-600'>ACCESORIES</li>
+
+      </ul>
+    </div>
+
+</Container>
+
   )
 }
+export default Navbar;
+
