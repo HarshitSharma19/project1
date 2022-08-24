@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 export default function ANavbar() {
   return (
     <>
-    <div className='w-screen bg-blue-800 py-2 flex sticky top-0 justify-between'>
+    <div className='w-screen h-[8vh] bg-blue-800 py-2 flex justify-between'>
       <span className='text-3xl  text-white pl-6 '>iSHOP</span>
       <div  className='flex mx-6'>
           <div className='mx-3 text-white pt-1'>

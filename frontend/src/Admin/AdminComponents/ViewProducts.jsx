@@ -1,17 +1,17 @@
-
+import { Link } from 'react-router-dom'
 import React from 'react'
 
-export default function ViewProducts(props) {
+export default function ViewProducts() {
   return (
     <> 
     <div className=' flex border-b-2 justify-between px-4 py-2'> 
       <div className=' h-14 text-2xl flex items-center justify-center text-gray-700'> View Products</div>
       <div className=' pt-1'>
-        <button onClick={props.eventsixth}>
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="blue" viewBox="0 0 24 24" stroke="white" strokeWidth="1">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-        </button>
+        <Link to='/admin-panel/add-products'><button>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="blue" viewBox="0 0 24 24" stroke="white" strokeWidth="1">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </button></Link>
       </div>
     </div>    
     <div className='mt-6 mx-10'>
@@ -19,9 +19,10 @@ export default function ViewProducts(props) {
         <thead className='border-b-2 '>
           <tr className='h-12'>
           <th>S.No</th>
-          <th>Product Id</th>
           <th>Product Name</th>
-          <th>Status</th>
+          <th>Image</th>
+          <th>Price</th>
+          <th>Discount</th>
           <th>Action</th>
           </tr>
         </thead>
@@ -29,8 +30,9 @@ export default function ViewProducts(props) {
           <tr className=' border-b-2  '>
             <td>1</td>
             <td>Laptop</td>
-            <td>Mac book</td>
-            <td>active</td>
+            <td>Mac book</td> 
+            <td>Mac book</td> 
+            <td>Mac book</td>      
             <td className='flex justify-around py-2 pr-4  '>
             <button><svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 " fill="none" viewBox="0 0  24  24" stroke="currentColor" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
@@ -43,8 +45,9 @@ export default function ViewProducts(props) {
           <tr className=' border-b-2  '>
             <td>1</td>
             <td>Laptop</td>
+            <td>Mac book</td> 
             <td>Mac book</td>
-            <td>active</td>
+            <td>Mac book</td>
             <td className='flex justify-around py-2 pr-4  '>
             <button><svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 " fill="none" viewBox="0 0  24  24" stroke="currentColor" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
