@@ -1,4 +1,10 @@
 import Container from './Container.jsx'
+import visa from './Images/visa.svg'
+import wester from './Images/Western_union.svg'
+import master from './Images/master_card.svg'
+import paypal from './Images/Paypal.svg'
+
+
 import React from 'react'
 
 export default function Footer() {
@@ -6,7 +12,7 @@ export default function Footer() {
     <>
    <Container>
     
-   <div className=" leading-10 border-t-4 border-b-4 border-black-600 my-20 py-5 flex  justify-around  ">
+   <div className="   leading-10 border-t-4 border-b-4 border-black-600 my-20 py-5 md:flex md:justify-center   ">
     <ul>
       <span className='font-bold' >Information</span>
       <li className="text-sm" >AboutUs</li>
@@ -50,8 +56,15 @@ export default function Footer() {
       <li className="text-sm" >Terms & Conditions</li>
     </ul>
    </div>
-   </Container>
    <hr />
+   <div className='flex justify-end' >
+    <img className='px-2'  src={visa} alt="" />
+    <img className='px-2' src={wester} alt="" />
+    <img className='px-2' src={paypal} alt="" />
+    <img className='px-2' src={master} alt="" />
+   </div>    
+   </Container>
+  
 
    </>
   )
