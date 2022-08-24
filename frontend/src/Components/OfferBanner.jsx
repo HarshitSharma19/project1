@@ -5,7 +5,7 @@ import Container from './Container'
 
 
 
-export default function Banner2() {
+export default function OfferBanner() {
 return (
 <div className='bg-blue-700    md:w-[100%] w-[100%]'>
   <Container>
