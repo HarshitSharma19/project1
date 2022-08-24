@@ -14,7 +14,7 @@ export default function MainPage() {
     </Container>
     <Banner2/>
     <Container>
-      </Container>
+    </Container>
     </>
     )
   }

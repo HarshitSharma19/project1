@@ -7,7 +7,7 @@
 
       .cls-1 {
         stroke: #33a0ff;
-        stroke-width: 2px;
+        strokeWidth: 2px;
         opacity: 0.25;
       }
 

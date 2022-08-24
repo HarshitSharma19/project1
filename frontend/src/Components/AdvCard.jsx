@@ -1,5 +1,5 @@
 import React from 'react'
-import appleship from '../Images/shipping.svg'
+import appleship from './Images/shipping.svg'
 
 
 export default function advCard() {
