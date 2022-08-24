@@ -7,7 +7,7 @@ import Jwt from "jsonwebtoken";
 class AdminController{
     /*---------------------------------------------------------*/
     register = (Data)=>{
-        return new Promise(async(resolve , reject)=>{
+        return new Promise((resolve , reject)=>{
             try{
                 const saveData = Encrypter(Data.Password);
                 const newData = AdminLoginModel({...Data , Password : saveData});

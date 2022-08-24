@@ -6,6 +6,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import { AdminLogin } from "./Routes/AdminLogin.js";
 import { UserLogin } from "./Routes/UserLogin.js";
+import { AdminOperation } from "./Routes/AdminOperation.js";
 import { Auth } from "./Middleware/Auth.js";
 /*---------------------------------------------------------*/
 /*---------------------------------------------------------*/
@@ -25,17 +26,21 @@ await mongoose.connect(process.env.DB).then(()=>{
 /*---------------------------------------------------------*/
 if(ConnStatus){
     const App = Express();
+
     /*ADMIN LOGIN PENDING*/
     App.use(bodyParser.json())
     App.use(cors({origin: "*"}))
     App.use("/admin-panel", AdminLogin)
     /*ADMIN LOGIN DONE*/
-    App.get("/admin-panel/admin", Auth ,(req , res)=>{
-        res.send(req.User);
-    })
+
+    /*ADMIN CURD OPR*/
+    App.use("/admin-panel/admin", Auth , AdminOperation)
+    /*ADMIN CURD OPR*/
+
     /*USER LOGIN PENDING*/
     App.use("/user", UserLogin)
     /*USER LOGIN DONE*/
+    
     App.listen(process.env.PORT , ()=>{
         console.log(`Server is running on http://localhost:${process.env.PORT}`)
     })

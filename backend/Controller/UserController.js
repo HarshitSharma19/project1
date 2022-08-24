@@ -1,13 +1,13 @@
 /*---------------------------------------------------------*/
 import { UserLoginModel } from "../Model/UserLoginModel.js";
-import { Decrypter, Encrypter } from "../library/helper";
+import { Decrypter, Encrypter } from "../library/helper.js";
 import Jwt from "jsonwebtoken";
 /*---------------------------------------------------------*/
 /*---------------------------------------------------------*/
 class UserController{
     /*---------------------------------------------------------*/
     register = (Data)=>{
-        return new Promise(async(resolve , reject)=>{
+        return new Promise((resolve , reject)=>{
             try{
                 const saveData = Encrypter(Data.Password);
                 const newData = UserLoginModel({...Data , Password : saveData});
