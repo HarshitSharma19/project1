@@ -1,20 +1,21 @@
 /*---------------------------------------------------------*/
-import { AdminLoginModel } from "../Model/AdminLoginModel.js";
+import { UserLoginModel } from "../Model/UserLoginModel.js";
 import { Decrypter, Encrypter } from "../library/helper.js";
 import Jwt from "jsonwebtoken";
 /*---------------------------------------------------------*/
 /*---------------------------------------------------------*/
-class AdminController{
+class UserController{
     /*---------------------------------------------------------*/
     register = (Data)=>{
         return new Promise((resolve , reject)=>{
             try{
                 const saveData = Encrypter(Data.Password);
-                const newData = AdminLoginModel({...Data , Password : saveData});
+                const newData = UserLoginModel({...Data , Password : saveData});
                 newData.save();
                 resolve({
                     msg : "User Registerd Successfully",
                     Name : newData.Name,
+                    Contact: newData.Contact ,
                     Email : newData.Email,
                     Password : Data.Password,
                     status : 1
@@ -33,11 +34,11 @@ class AdminController{
     login = (Data)=>{
         return new Promise(async(resolve , reject)=>{
             try{
-                const dbData = await AdminLoginModel.findOne({Email : Data.Email})
+                const dbData = await UserLoginModel.findOne({Email : Data.Email})
                 if(dbData != null){
                     const password = Decrypter(dbData.Password)
                     if(password == Data.Password && dbData.Email == Data.Email){
-                        const token = Jwt.sign({ User : Data},process.env.TOKEN_KEY)
+                        const token = Jwt.sign({ exp: Math.floor(Date.now()/1000) + (60 * 60) , User : Data},process.env.TOKEN_KEY)
                         resolve({
                             msg : "Login Success",
                             email : dbData.Email,
@@ -67,5 +68,5 @@ class AdminController{
     /*---------------------------------------------------------*/
 }
 /*---------------------------------------------------------*/
-export {AdminController};
+export {UserController};
 /*---------------------------------------------------------*/
