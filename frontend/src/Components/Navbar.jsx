@@ -15,7 +15,7 @@ export default function Navbar() {
      <ul className='flex justify-center' >
          <li className='p-6' >HOME</li>
          <li className='p-6 relative ' >STORE
-         <div style={{width:"800px", margin:"auto"}} className=' hidden	 absolute text-center    border-2 border-indigo-500/100 text-black flex justify-between	 bg-white'>
+         <div style={{width:"800px", margin:"auto"}} className='hidden absolute text-centeborder-2 border-indigo-500/100 text-black flex justify-between	 bg-white'>
                      
                         <ul className='w-300 border-2 leading-8 border-indigo-500/100 ' >
                           <li className='font-bold' >Accessories</li>
