@@ -14,6 +14,7 @@ import Footer from "./Components/Footer.jsx"
 import MainPage from './Pages/MainPage.jsx'
 import AdvCard from "./Components/AdvCard.jsx"
 import FooterDetails from './Components/FooterDetails'
+import Cart from "./Pages/Cart.jsx";
 
 export default function App() {
   return (
@@ -22,7 +23,7 @@ export default function App() {
     <ScrollToTop/>
     <Top/>
     <Navbar/>
-
+    
     <Routes>
     <Route element={<MainPage/>} path="/"/>
     <Route element={<Products/>} path="/products"/>
@@ -31,6 +32,7 @@ export default function App() {
     <AdvCard/>
     <FooterDetails/>
     <Footer/>
+    <Cart/>
 </>
    
     )
