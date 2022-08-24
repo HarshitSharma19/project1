@@ -11,7 +11,7 @@ export default function AdminLogin() {
   return (
   <> 
   <div><ANavbar/></div>
-  <div className='w-full flex h-[591px]'>
+  <div className='w-full flex h-[591px]'> 
     <div className='bg-gray-100  w-3/12'>
      <DropDown key={""} eventfirst={()=>setActive("first")} eventsecond={()=>setActive("second")} eventthird={()=>setActive("third")} eventfourth={()=>setActive("fourth")}/>
     </div>

@@ -1,7 +1,7 @@
 
 import React from 'react'
-import applfooter from './Images/facebook.svg'
-import applfoot from './Images/twitter.svg'
+import applfooter from '../Images/facebook.svg'
+import applfoot from '../Images/twitter.svg'
 import { Link } from 'react-router-dom'
 export default function FooterDetails() {
   return (
