@@ -9,6 +9,7 @@ import Products from './Pages/Accessories.jsx'
 import Footer from "./Components/Footer.jsx"
 import MainPage from './Pages/MainPage'
 import AdvCard from "./Components/AdvCard.jsx"
+import FooterDetails from './Components/FooterDetails';
 
 // import FooterDetails from './Components/FooterDetails.jsx'
 
@@ -21,11 +22,12 @@ export default function App() {
     <Navbar/>
 
     <Routes>
-    <Route element={<MainPage/>} path="/home"/>
+    <Route element={<MainPage/>} path="/"/>
     <Route element={<Products/>} path="/products"/>
     
     </Routes>
     <AdvCard/>
+    <FooterDetails/>
     <Footer/>
 </>
    
