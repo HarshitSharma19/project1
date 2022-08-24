@@ -1,5 +1,5 @@
 import React from 'react'
-import banner from '../Images/iphone_6_plus.svg';
+import banner from './Images/iphone_6_plus.svg';
 import Container from './Container';
 
 export default function Banner() {
