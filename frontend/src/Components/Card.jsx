@@ -9,7 +9,7 @@ export default function Card() {
             </h1>
 
             <div>
-                <ul className='flex justify-center '>
+                <ul className='flex justify-center'>
                     <li className='px-5 font-bold'>All</li>
                     <li className='px-5 font-bold '>Mac</li>
                     <li className='px-5 font-bold'>iPhone</li>
