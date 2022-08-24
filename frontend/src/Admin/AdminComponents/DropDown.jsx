@@ -7,7 +7,7 @@ export default function DropDown(props) {
     <div className="w-full px-4 pt-10">
       <div className="mx-auto w-full max-w-md bg-gray-100  p-2">
         <Disclosure>
-          {({ open }) => (
+          {({ open }) => ( 
             <>
               <Disclosure.Button className="flex w-full justify-between rounded-lg bg-blue-100 px-4 py-2 text-left text-base font-medium  text-blue-900 hover:bg-blue-300 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-75">
                 <span>Categories</span>
