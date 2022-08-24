@@ -1,8 +1,8 @@
 import Container from './Container.jsx'
-import visa from './Images/visa.svg'
-import wester from './Images/Western_union.svg'
-import master from './Images/master_card.svg'
-import paypal from './Images/Paypal.svg'
+import visa from '../Images/visa.svg'
+import wester from '../Images/Western_union.svg'
+import master from '../Images/master_card.svg'
+import paypal from '../Images/Paypal.svg'
 
 
 import React from 'react'

@@ -1,8 +1,8 @@
 
 import React from 'react'
 import Container from '../Components/Container.jsx'
-import Philips from '../Components/Images/philips_hue.svg'
-import Applemac from '../Components/Images/apple_macbook.png'
+import Philips from '../Images/philips_hue.svg'
+import Applemac from '../Images/apple_macbook.png'
 
 
 export default function Cart() {

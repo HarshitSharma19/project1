@@ -21,7 +21,7 @@ const Navbar = () => {
      <ul className='flex hidden md:flex justify-center' >
          <li className='p-6 cursor-pointer' >HOME</li>
          <li className='p-6 cursor-pointer relative ' >STORE
-         <div style={{width:"800px", margin:"auto"}} className=' hidden	 absolute text-center    border-2 border-indigo-500/100 text-black flex justify-between	 bg-white'>
+         <div style={{width:"800px", margin:"auto"}} className=' hidden	 absolute text-center border-2 border-indigo-500/100 text-black flex justify-between	 bg-white'>
                      
                         <ul className='w-300 hidden md:flex border-2 leading-8 border-indigo-500/100 ' >
                           <li className='font-bold' >Accessories</li>
@@ -60,7 +60,7 @@ const Navbar = () => {
          <li className='p-6 cursor-pointer' >ACCESORIES</li>
      </ul>
   </div>
-  <div className=' flex justify-between first-letter:   items-center h-24 max-w-[1240px] mx-auto px-4 text-b'>
+  <div className=' flex justify-between md:hidden items-center h-24 max-w-[1240px] mx-auto px-4 text-b'>
       <div onClick={handleNav} className='block md:hidden'>
           {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20} />}
       </div>

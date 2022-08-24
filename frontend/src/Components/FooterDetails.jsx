@@ -20,7 +20,7 @@ function FooterBox(){
         </h5>
             <p className="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
             <div className='flex'>
-                <img className="rounded-t-lg mb-3 font-bold w-3 m-2" src={applfooter} alt="product"/>
+                      <img className="rounded-t-lg mb-3 font-bold w-3 m-2" src={applfooter} alt="product"/>
                 <img className="rounded-t-lg mb-3 font-bold w-5 m-2" src={applfoot} alt="product"/>
             </div>
 </Link>
