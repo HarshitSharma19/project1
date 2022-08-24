@@ -10,7 +10,7 @@ import Footer from "./Components/Footer.jsx"
 import MainPage from './Pages/MainPage'
 import AdvCard from "./Components/AdvCard.jsx"
 
-import FooterDetails from './Components/FooterDetails.jsx'
+// import FooterDetails from './Components/FooterDetails.jsx'
 
 
 export default function App() {
@@ -27,7 +27,7 @@ export default function App() {
     </Routes>
     <AdvCard/>
     <Footer/>
-
+</>
    
     )
   }
