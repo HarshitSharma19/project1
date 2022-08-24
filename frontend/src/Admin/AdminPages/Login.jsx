@@ -2,7 +2,7 @@ import React from 'react'
 import undraw from '../../Images/undraw_login_re_4vu2.svg'
 export default function Login() {
   return (  
-    <div className='grid grid-cols-2 gap-8'>
+    <div className='grid grid-cols-2 gap-8'> 
         <div className="min-h-screen bg-gray-100 text-gray-800 px-4 py-6 flex flex-col justify-center">
           <div className="relative py-3 w-10/12 px-6 mx-auto text-center ">
             <span className="text-2xl font-light">Admin login</span>

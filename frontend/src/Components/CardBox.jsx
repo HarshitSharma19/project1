@@ -1,5 +1,5 @@
 
-import applemc from './Images/Apple Macbook Air.png'
+import applemc from '../Images/Apple Macbook Air.png'
 export default function CardBox() {
     return (
         

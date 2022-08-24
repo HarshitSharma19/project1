@@ -1,24 +1,24 @@
 
 import React from 'react'
 
-import apple6 from './Images/iphone_6_plus.svg'
+import apple6 from '../Images/iphone_6_plus.svg'
 import Container from './Container'
 
 
 
 export default function Banner2() {
   return (
-    <div className='bg-blue-700 w-[100%]'>
+    <div className='bg-blue-700    md:w-[100%] w-[100%]'>
     <Container>
     <div className='h-80 flex  justify-between' style={{ width: "90%",height:"400px", margin: " auto " }}>
       <div className='text-center flex flex-col justify-center '>
-        <h1 className=' text-center text-4xl text-white my-10'>iPhone 6 Plus </h1>
-        <p className='text-2xl  text-white'>Performance and design. Taken right to the edge.</p>
-        <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold my-10 mx-52 py-2 px-1 border border- b-2 rounded shadow">
+        <h1 className=' md:text-center md:text-4xl text-sm text-white my-10'>iPhone 6 Plus </h1>
+        <p className='md:text-2xl text-sm  text-white'>Performance and design. Taken right to the edge.</p>
+        <button className="bg-white hover:bg-gray-100   md:text-gray-800 font-semibold my-10 mx-52 py-2 px-1 border border-b-2 rounded shadow">
           Shop Now
         </button>
       </div>
-      <div><img className='h-[110%] mt-[-40px]' src={apple6} alt="" /></div>
+      <div><img className='  md:mt-[-40px] md:h-[110%] ' src={apple6} alt="" /></div>
     </div>
     </Container>
     </div>
