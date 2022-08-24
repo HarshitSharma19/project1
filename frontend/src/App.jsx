@@ -9,8 +9,8 @@ import Products from './Pages/Accessories.jsx'
 import Footer from "./Components/Footer.jsx"
 import MainPage from './Pages/MainPage'
 import AdvCard from "./Components/AdvCard.jsx"
-
-// import FooterDetails from './Components/FooterDetails.jsx'
+import FooterDetails from './Components/FooterDetails.jsx'
+import Cart from './Pages/Cart';
 
 
 export default function App() {
@@ -19,14 +19,17 @@ export default function App() {
     <ScrollToTop/>
     <Top/>
     <Navbar/>
-
+    <Cart/>
     <Routes>
-    <Route element={<MainPage/>} path="/home"/>
+    <Route element={<MainPage/>} path="/"/>
     <Route element={<Products/>} path="/products"/>
     
     </Routes>
-    <AdvCard/>
+    <AdvCard/> 
+    <FooterDetails/>
     <Footer/>
+  
+  
 </>
    
     )
