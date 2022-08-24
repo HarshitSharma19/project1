@@ -6,7 +6,8 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import { AdminLogin } from "./Routes/AdminLogin.js";
 import { UserLogin } from "./Routes/UserLogin.js";
-import { AdminOperation } from "./Routes/AdminOperation.js";
+import { AdminCategoryOperation } from "./Routes/AdminCategoryOperation.js";
+import { AdminProductOperation } from "./Routes/AdminProductOperation.js";
 import { Auth } from "./Middleware/Auth.js";
 /*---------------------------------------------------------*/
 /*---------------------------------------------------------*/
@@ -15,33 +16,34 @@ dotenv.config({
 })
 /*---------------------------------------------------------*/
 let ConnStatus;
-await mongoose.connect(process.env.DB).then(()=>{
+await mongoose.connect(process.env.DB).then(() => {
     ConnStatus = true;
     console.log("Connection Successful")
-}).catch(()=>{
+}).catch(() => {
     ConnStatus = false;
     console.log("Connection Error")
 })
 /*---------------------------------------------------------*/
 /*---------------------------------------------------------*/
-if(ConnStatus){
+if (ConnStatus) {
     const App = Express();
 
     /*ADMIN LOGIN PENDING*/
     App.use(bodyParser.json())
-    App.use(cors({origin: "*"}))
+    App.use(cors({ origin: "*" }))
     App.use("/admin-panel", AdminLogin)
     /*ADMIN LOGIN DONE*/
 
     /*ADMIN CURD OPR*/
-    App.use("/admin-panel/admin", Auth , AdminOperation)
+    App.use("/admin-panel", Auth, AdminCategoryOperation)
+    App.use("/admin-panel", Auth , AdminProductOperation)
     /*ADMIN CURD OPR*/
 
     /*USER LOGIN PENDING*/
     App.use("/user", UserLogin)
     /*USER LOGIN DONE*/
-    
-    App.listen(process.env.PORT , ()=>{
+
+    App.listen(process.env.PORT, () => {
         console.log(`Server is running on http://localhost:${process.env.PORT}`)
     })
 }
