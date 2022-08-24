@@ -1,3 +1,4 @@
+
 import React from 'react'
 import applfooter from './Images/facebook.svg'
 import applfoot from './Images/twitter.svg'
@@ -31,4 +32,5 @@ function FooterBox(){
 </>
     
     )
+
 }
