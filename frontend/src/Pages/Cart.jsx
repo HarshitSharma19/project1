@@ -1,18 +1,33 @@
+
 import React from 'react'
-import philips from '../Images/philips_hue.svg'
+import Container from '../Components/Container.jsx'
 
 export default function Cart() {
   return (
-    <div>
-      <ul className='text-xl uppercase flex font-bold justify-around border-b-2 border-gray-500'>
-        <li >Products</li>
-        <li>price</li>
-        <li>oty</li>
-        <li >unit price</li>
+    <>
+    <Container>
+      <div>
+      <ul className='flex justify-between ' >
+        <li>PRODUCT</li>
+        <li>PRICE</li>
+        <li>QTY</li>
+        <li>UNIT PRICE</li>
       </ul>
-      <ul>
-      <img className="rounded-t-lg mb-3 font-bold w-5 m-2" src={philips} alt="product"/>
+      <ul flex justify-between  >
+        <li> Philips Hue 7W BR30 Connected Downlight Lamp</li>
+        <li> <button type="button" className="border border-black font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800">
+  
+  +</button>  <input type="text"  /> <button type="button" className="border border-black font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800">
+  
+-</button> </li>
+        <li>$998</li>
+        <li>$449</li>
       </ul>
-    </div>
+      </div>
+
+    </Container>
+    
+    </>
   )
 }
+

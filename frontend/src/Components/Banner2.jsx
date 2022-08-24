@@ -1,6 +1,7 @@
+
 import React from 'react'
 
-import apple6 from '../Images/iphone_6_plus.svg'
+import apple6 from './Images/iphone_6_plus.svg'
 import Container from './Container'
 
 
@@ -13,7 +14,7 @@ export default function Banner2() {
       <div className='text-center flex flex-col justify-center '>
         <h1 className=' text-center text-4xl text-white my-10'>iPhone 6 Plus </h1>
         <p className='text-2xl  text-white'>Performance and design. Taken right to the edge.</p>
-        <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold my-10 mx-52 py-2 px-1 border border- b-2 rounded shadow">
+        <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold my-10 mx-52 py-2 px-1 border border- b-2 rounded shadow">
           Shop Now
         </button>
       </div>
@@ -36,7 +37,7 @@ export default function Banner2() {
 //   <div className='my-20'>
 //     <h1 className=' text-center text-2xl font-bold my-5'>iPhone 6 Plus </h1>
 //         <p className='text-2xl font-bold mx-20'>Performance and design. Taken right to the edge.</p>
-//         <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold my-10 mx-52 py-2 px-1 border border- b-2 rounded shadow">
+//         <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold my-10 mx-52 py-2 px-1 border border- b-2 rounded shadow">
 //           Shop Now
 //         </button>
 //   </div >

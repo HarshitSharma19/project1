@@ -1,3 +1,4 @@
+
 import React from 'react'
 import {Link} from "react-router-dom"
 import Container from '../Components/Container'
@@ -14,8 +15,9 @@ export default function MainPage() {
     </Container>
     <Banner2/>
     <Container>
-      </Container>
+    </Container>
     </>
     )
   }
+
   
