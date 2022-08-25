@@ -20,6 +20,7 @@ import FooterDetails from './Components/FooterDetails'
 import Footer from "./Components/Footer.jsx"
 import Top from "./Components/Top.jsx"
 import Navbar from "./Components/Navbar.jsx"
+import Slider from "./Components/Slider.jsx"
 
 
 

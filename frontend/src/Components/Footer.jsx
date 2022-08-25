@@ -13,7 +13,7 @@ return (
   <div className='border-b-4'>
     <Container>
 
-      <div className=" flex justify-between my-5">
+      <div className=" flex-none text-center md:flex md:justify-between my-5">
         <div className='mr-5'>
           <ul>
             <li className='text-2xl font-bold pb-4'>Information</li>
@@ -79,7 +79,7 @@ return (
     </Container>
   </div>
   <Container>
-    <div className='flex justify-end mt-5'>
+    <div className=' flex justify-center md:flex md:justify-end mt-5'>
       <img className='px-2' src={visa} alt="" />
       <img className='px-2' src={wester} alt="" />
       <img className='px-2' src={paypal} alt="" />

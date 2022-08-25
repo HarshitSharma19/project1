@@ -18,7 +18,7 @@ return (
           Shop Now
         </button>
       </div>
-      <div><img className='  md:mt-[-40px] md:h-[110%] ' src={apple6} alt="" /></div>
+      <div><img  className='md:mt-[-40px] md:h-[110%] ' src={apple6} alt="" /></div>
     </div>
   </Container>
 </div>

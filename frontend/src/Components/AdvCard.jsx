@@ -21,8 +21,8 @@ export default function advCard() {
     }
     function Sheeping(){
         return(
-            <div className='font-bold my-20'>
-                <div className="first:p-6 max-w-sm justify-center text-center items-center bg-white ">
+            <div className='font-bold flex justify-center my-20'>
+                <div className="first:p-6 max-w-sm  text-center items-center bg-white ">
                     <div className='text-center'> 
                         <img className="p-5 m-auto items-center rounded-t-lg" src={appleship} alt="product" />
                     </div>
@@ -34,7 +34,7 @@ export default function advCard() {
         }
         function Refund(){
             return(
-                <div className='font-bold my-20'>
+                <div className=' flex justify-center font-bold my-20'>
                     <div className="first:p-6 max-w-sm justify-center text-center items-center bg-white ">
                         <div className='text-center'> 
                             <img className="p-5 m-auto items-center rounded-t-lg" src={refund} alt="product" />
@@ -47,7 +47,7 @@ export default function advCard() {
             }
             function Support(){
                 return(
-                    <div className='font-bold my-20'>
+                    <div className=' flex justify-center font-bold my-20'>
                         <div className="first:p-6 max-w-sm justify-center text-center items-center bg-white ">
                             <div className='text-center'> 
                                 <img className="p-5 m-auto items-center rounded-t-lg" src={support} alt="product" />
