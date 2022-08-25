@@ -6,22 +6,13 @@ export default function Card() {
     return (
         <Container>
             
-            <div
-                style={{
-                width: "100%",
-                display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "center",
-                marginTop: "20px"
-            }}>
-
+            <div className='w-full flex flex-wrap justify-center mt-10'>
+                <CardBox/>
                 <CardBox/>
                 <CardBox/>
                 <CardBox/>
                 <CardBox/>
                 
-                
-
             </div>
         </Container>
     )
