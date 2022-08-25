@@ -36,7 +36,6 @@ return (
     <Route element={<MainPage />} path="/"/>
     <Route element={<Mobiles />} path="/mobiles"/>
     <Route element={<Store />} path="/store"/>
-
     <Route element={<Laptop />} path="/laptops"/>
     <Route element={<Accessories />} path="/accessories"/>
     <Route element={<Cart />} path="/cart"/>
@@ -47,9 +46,6 @@ return (
     <Route element={<Watches />} path="/watches"/>
     <Route element={<Checkout />} path="/checkout"/>
     <Route element={<Offers />} path="/offers"/>
-
-
-
   </Routes>
   <AdvCard />
   <FooterDetails />

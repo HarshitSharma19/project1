@@ -1,10 +1,10 @@
 
 import applemc from '../Images/Apple Macbook Air.png'
 export default function CardBox() {
-    return (
+    return ( 
         
         <div
-            className=" w-25 max-w-sm  bg-white rounded-lg   border  m-5 px-3 py-2 "
+            className=" w-[210px] max-w-sm  bg-white rounded-lg   border  m-2 px-3 py-2 "
             style={{
             border: "3px solid #F6F7F8"
         }}>
