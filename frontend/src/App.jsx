@@ -1,19 +1,19 @@
 
-//import React,{useEffect} from "react"
-//import { useLocation,Route,Routes } from 'react-router-dom';
-// import Products from "./Pages/Accessories.jsx"
-// import Top from "./Components/Top.jsx"
-// import Navbar from "./Components/Navbar.jsx"
-// import Footer from "./Components/Footer.jsx"
-// import MainPage from './Pages/MainPage.jsx'
-// import AdvCard from "./Components/AdvCard.jsx"
-// import FooterDetails from './Components/FooterDetails'
-import AdminApp from "./Admin/AdminApp.jsx";
+import React,{useEffect} from "react"
+import { useLocation,Route,Routes } from 'react-router-dom';
+import Products from "./Pages/Accessories.jsx"
+import Top from "./Components/Top.jsx"
+import Navbar from "./Components/Navbar.jsx"
+import Footer from "./Components/Footer.jsx"
+import MainPage from './Pages/MainPage.jsx'
+import AdvCard from "./Components/AdvCard.jsx"
+import FooterDetails from './Components/FooterDetails'
+// import AdminApp from "./Admin/AdminApp.jsx";
 
 export default function App() {
   return (
     <>
-    {/* <ScrollToTop/>
+    <ScrollToTop/>
     <Top/>
     <Navbar/>
 
@@ -23,9 +23,9 @@ export default function App() {
     </Routes>
     <AdvCard/>
     <FooterDetails/>
-    <Footer/> */}
+    <Footer/>
 
-    <AdminApp/>
+    {/* <AdminApp/> */}
 </>
    
     )

@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-// import download from './Images/iSHOP Logo.svg'
+//import download from './Images/iSHOP Logo.svg'
 import Container from './Container.jsx'
 
 const Navbar = () => {

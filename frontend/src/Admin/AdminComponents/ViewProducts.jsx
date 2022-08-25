@@ -4,17 +4,17 @@ import React from 'react'
 export default function ViewProducts() {
   return (
     <> 
-    <div className=' flex border-b-2 justify-between px-4 py-2'> 
+    <div className=' flex border-b-2 justify-between px-4 py-2 '> 
       <div className=' h-14 text-2xl flex items-center justify-center text-gray-700'> View Products</div>
       <div className=' pt-1'>
         <Link to='/admin-panel/add-products'><button>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="blue" viewBox="0 0 24 24" stroke="white" strokeWidth="1">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="#54a0ff" viewBox="0 0 24 24" stroke="white" strokeWidth="1">
           <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
         </button></Link>
       </div>
     </div>    
-    <div className='mt-6 mx-10'>
+    <div className='mt-6 mx-10 mb-16'>
       <table className="table-auto text-center w-full ">
         <thead className='border-b-2 '>
           <tr className='h-12'>
@@ -27,7 +27,7 @@ export default function ViewProducts() {
           </tr>
         </thead>
         <tbody >
-          <tr className=' border-b-2  '>
+          <tr className=' border-b  '>
             <td>1</td>
             <td>Laptop</td>
             <td>Mac book</td> 
@@ -42,7 +42,7 @@ export default function ViewProducts() {
             </td>
           </tr>
                   
-          <tr className=' border-b-2  '>
+          <tr className=' border-b  '>
             <td>1</td>
             <td>Laptop</td>
             <td>Mac book</td> 
