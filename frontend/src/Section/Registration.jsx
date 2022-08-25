@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import download from '../Components/Images/bg (1).avif'
 
 export default function Registration() {
   return (
     <>
     <div class=" h-14 bg-gradient-to-r from-violet-500 to-fuchsia-500 flex items-center justify-center min-h-screen bg-gray-100">
-    <div class="  shadow-lg shadow-black  px-8 py-6 mx-4 mt-4 text-left bg-white shadow-lg md:w-1/3 lg:w-1/3 sm:w-1/3">
+    <div class="  shadowLg shadow-black  px-8 py-6 mx-4 mt-4 text-left bg-white shadow-lg md:w-1/3 lg:w-1/3 sm:w-1/3">
         <div class="flex justify-center">
         <img className='justify-center'  src={download} alt="" />
         </div>
@@ -39,9 +40,9 @@ export default function Registration() {
                 </div>
                 <div class="mt-6 text-grey-dark">
                     Already have an account?
-                    <a class="text-blue-600 hover:underline" href="#">
+                    <Link class="text-blue-600 hover:underline" to="#">
                         Log in
-                    </a>
+                    </Link>
                 </div>
             </div>
         </form>
