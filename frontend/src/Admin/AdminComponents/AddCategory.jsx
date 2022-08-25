@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link, useParams } from 'react-router-dom'
-
+import { useParams } from 'react-router-dom'
+import Dropzone from './Dropzone'
 export default function AddCategory() {
   const Page = useParams()
   return (
@@ -19,12 +19,12 @@ export default function AddCategory() {
         <table className='table-auto w-full '>
           <tbody>
             <tr className='h-16'>
-              <td className='w-48'>Category</td>
+              <td className='w-48'>Name</td>
               <td><input type="text" className="border border-slate-400  w-96 h-8 focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md" /> </td>
             </tr>
-            <tr className='h-16 border-b-2'>
-              <td className='w-48 pb-32 pt-7'>Brand</td>
-              <td className='pb-32 pt-7'><input type="text" className="border border-slate-400  w-96 h-8 focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md" /></td>
+            <tr className='h-26 border-b-2'>
+              <td className='flex items-start mt-4'>Upload Images</td>
+              <td className=' mt-6 pt-4 pb-20'><Dropzone/></td>
             </tr>
             <tr>
               <td className='h-28 text-end' colSpan={2} >

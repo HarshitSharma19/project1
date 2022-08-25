@@ -1,7 +1,8 @@
 import React from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import Dropzone from "./Dropzone"
 export default function AddProducts() {
+  
   const Page = useParams()
   return (
     (Page.id)?
@@ -37,14 +38,14 @@ export default function AddProducts() {
             </tr>
             <tr className='h-28'>
               <td> 
-                <select className="w-56 h-8 text-center rounded-md">
+                <select className="w-56 h-8 text-center rounded-md border">
                   <option value="">--Brand--</option>
                   <option value="Partnership">Partnership</option>
                   <option value="General Question">General</option>
                 </select>
               </td>
               <td>
-                <select className="w-56 h-8 text-center rounded-md">
+                <select className="w-56 h-8 text-center rounded-md border">
                   <option value="">--Categories--</option>
                   <option value="Partnership">Partnership</option>
                   <option value="General Question">General</option>

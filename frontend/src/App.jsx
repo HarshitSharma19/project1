@@ -1,32 +1,32 @@
-import { useLocation,Route,Routes } from "react-router-dom"
-import React,{ useEffect} from "react"
+// import { useLocation,Route,Routes } from "react-router-dom"
+// import React,{ useEffect} from "react"
 
-import Mobiles from "./Pages/Mobiles.jsx"
-import MainPage from './Pages/MainPage.jsx'
-import Error from "./Pages/Error.jsx"
-import Laptop from "./Pages/Laptop.jsx"
-import Offers from "./Pages/Offers.jsx"
-import Accessories from "./Pages/Accessories.jsx"
-import Cart from "./Pages/Cart.jsx"
-import Checkout from "./Pages/Checkout.jsx"
-import Store from "./Pages/Store.jsx"
-import PrivacyPolicy from "./Pages/PrivacyPolicy.jsx"
-import Profile from "./Pages/Profile.jsx"
-import Tablets from "./Pages/Tablet.jsx"
-import TermConditions from "./Pages/TermConditions.jsx"
-import Watches from "./Pages/Watches.jsx"
-import AdvCard from "./Components/AdvCard.jsx"
-import FooterDetails from './Components/FooterDetails'
-import Footer from "./Components/Footer.jsx"
-import Top from "./Components/Top.jsx"
-import Navbar from "./Components/Navbar.jsx"
-
+// import Mobiles from "./Pages/Mobiles.jsx"
+// import MainPage from './Pages/MainPage.jsx'
+// import Error from "./Pages/Error.jsx"
+// import Laptop from "./Pages/Laptop.jsx"
+// import Offers from "./Pages/Offers.jsx"
+// import Accessories from "./Pages/Accessories.jsx"
+// import Cart from "./Pages/Cart.jsx"
+// import Checkout from "./Pages/Checkout.jsx"
+// import Store from "./Pages/Store.jsx"
+// import PrivacyPolicy from "./Pages/PrivacyPolicy.jsx"
+// import Profile from "./Pages/Profile.jsx"
+// import Tablets from "./Pages/Tablet.jsx"
+// import TermConditions from "./Pages/TermConditions.jsx"
+// import Watches from "./Pages/Watches.jsx"
+// import AdvCard from "./Components/AdvCard.jsx"
+// import FooterDetails from './Components/FooterDetails'
+// import Footer from "./Components/Footer.jsx"
+// import Top from "./Components/Top.jsx"
+// import Navbar from "./Components/Navbar.jsx"
+import AdminApp from './Admin/AdminApp.jsx'
 
 
 export default function App() {
 return (
 <>
-  <ScrollToTop />
+  {/* <ScrollToTop />
   <Top />
   <Navbar />
   <Routes>
@@ -47,9 +47,8 @@ return (
   </Routes>
   <AdvCard />
   <FooterDetails />
-
-  <Footer />
-
+  <Footer /> */}
+  <AdminApp/>
 
 </>
 
@@ -57,12 +56,12 @@ return (
 }
 
 
-function ScrollToTop() {
-const { pathname } = useLocation();
+// function ScrollToTop() {
+// const { pathname } = useLocation();
 
-useEffect(() => {
-window.scrollTo(0, 0);
-}, [pathname]);
+// useEffect(() => {
+// window.scrollTo(0, 0);
+// }, [pathname]);
 
-return null;
-}
+// return null;
+// }
