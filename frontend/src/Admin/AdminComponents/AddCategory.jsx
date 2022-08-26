@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import Dropzone from './Dropzone'
@@ -39,3 +40,4 @@ export default function AddCategory() {
     </>
   )
 }
+
