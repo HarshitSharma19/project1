@@ -10,11 +10,13 @@ const Schema = mongoose.Schema({
     Contact : {
         type: Number,
         length: 13,
-        require: true
+        require: true,
+        unique: true
     },
     Email : {
         type: String,
-        require: true
+        require: true,
+        unique: true
     },
     Password : {
         type : String,

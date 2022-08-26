@@ -5,7 +5,8 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema({
     Email : {
         type: String,
-        require: true
+        require: true,
+        unique: true
     },
     Password : {
         type : String,
