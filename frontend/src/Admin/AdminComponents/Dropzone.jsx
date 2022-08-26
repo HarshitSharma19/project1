@@ -64,7 +64,7 @@ function Dropzone(props) {
     <div key={file.name}
     >
       <img
-        className='mt-4'
+        className='mt-4 mr-2'
         width={80} 
         height={120}
         src={file.preview}
@@ -82,10 +82,10 @@ function Dropzone(props) {
   return (
     <section>
       <div {...getRootProps({style})}>
-        <input {...getInputProps()} />
+        <input {...getInputProps()}  multiple/>
         <div>Drag and drop your images here.</div>
       </div>
-      <div>
+      <div className='flex'>
         {thumbs}
       </div>
     </section>
