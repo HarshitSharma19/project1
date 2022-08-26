@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 
+
 const baseStyle = {
   display: 'flex',
   flexDirection: 'column',
@@ -44,7 +45,8 @@ function Dropzone(props) {
     isDragReject
   } = useDropzone({
     onDrop,
-    accept: 'image/jpeg, image/png'
+    accept: 'image/jpeg, image/png',
+   
   });
 
   const style = useMemo(() => ({
@@ -59,18 +61,20 @@ function Dropzone(props) {
   ]);
 
   const thumbs = files.map(file => (
-    <div key={file.name}>
+    <div key={file.name}
+    >
       <img
         className='mt-4'
         width={80} 
         height={120}
         src={file.preview}
         alt={file.name}
+        
       />
     </div>
   ));
 
-  // clean up
+  
   useEffect(() => () => {
     files.forEach(file => URL.revokeObjectURL(file.preview));
   }, [files]);
