@@ -37,7 +37,7 @@ AdminCategoryOperation.delete("/category/view/:id",async(req , res)=>{
 /*Delete Opr*/
 
 /*Update Opr*/
-AdminCategoryOperation.get("/Category/update/:id",async(req , res)=>{
+AdminCategoryOperation.get("/category/update/:id",async(req , res)=>{
     const id = req.params.id;
     await new CategoryController().updateCategoryGet(id).then((success)=>{
         res.send(success).status(200)
@@ -45,7 +45,7 @@ AdminCategoryOperation.get("/Category/update/:id",async(req , res)=>{
         res.send(error).status(400)
     })
 })
-AdminCategoryOperation.put("/Category/update/:id",async(req , res)=>{
+AdminCategoryOperation.put("/category/update/:id",async(req , res)=>{
     const id = req.params.id;
     await new CategoryController().updateCategory(id , req.body).then((success)=>{
         res.send(success).status(200)
@@ -55,6 +55,27 @@ AdminCategoryOperation.put("/Category/update/:id",async(req , res)=>{
 })
 /*Update Opr*/
 
+/*Update Status*/
+AdminCategoryOperation.put("/category/view/:id",async(req , res)=>{
+    const id = req.params.id;
+    await new CategoryController().toggleCategoryStatus(id , req.body).then((success)=>{
+        res.send(success).status(200)
+    }).catch((error)=>{
+        res.send(error).status(400)
+    })
+})
+/*Update Status*/
+
+/*Update HomePage*/
+AdminCategoryOperation.put("/category/view/:id",async(req , res)=>{
+    const id = req.params.id;
+    await new CategoryController().toggleCategoryHome(id , req.body).then((success)=>{
+        res.send(success).status(200)
+    }).catch((error)=>{
+        res.send(error).status(400)
+    })
+})
+/*Update HomePage*/
 /*---------------------------------------------------------*/
 export { AdminCategoryOperation };
 /*---------------------------------------------------------*/

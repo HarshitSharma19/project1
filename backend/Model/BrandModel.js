@@ -6,19 +6,15 @@ const Schema = mongoose.Schema({
     name: {
         type: String,
         require: true,
-        unique: true 
+        unique: true
     },
-    image: {
+    logo: {
         type: String,
         require: true
     },
     status: {
         type: Boolean,
         default: true
-    },
-    homepage: {
-        type: Boolean,
-        default: false
     },
     creater_at: {
         type: Date,
@@ -29,12 +25,12 @@ const Schema = mongoose.Schema({
         default: Date.now()
     },
     slug: {
-        type: String,
+        type: String , 
         unique: false
-    }
+    } 
 })
 /*---------------------------------------------------------*/
-const CategoryModel = mongoose.model("Category", Schema)
+const BrandModel = mongoose.model("Brand", Schema);
 /*---------------------------------------------------------*/
-export { CategoryModel };
+export { BrandModel };
 /*---------------------------------------------------------*/
