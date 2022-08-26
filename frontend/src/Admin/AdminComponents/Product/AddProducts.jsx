@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import Dropzone from "./Dropzone"
+import Dropzone from "../Dropzone"
 export default function AddProducts() {
   
   const Page = useParams()
