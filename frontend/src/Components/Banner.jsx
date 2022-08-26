@@ -13,7 +13,7 @@ return (
       opacity: "1",position:"relative"
     }}>
 
-      <img style={{
+      <img  style={{
       width: "570px",
       height: "100%"}} src={banner} alt="" />
 
