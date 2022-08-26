@@ -1,4 +1,5 @@
 
+
 import { useLocation,Route,Routes } from "react-router-dom"
 import React,{ useEffect} from "react"
 
@@ -22,6 +23,7 @@ import Footer from "./Components/Footer.jsx"
 import Top from "./Components/Top.jsx"
 import Navbar from "./Components/Navbar.jsx"
 
+import AdminApp from "./Admin/AdminApp"
 
 
 
@@ -29,7 +31,7 @@ import Navbar from "./Components/Navbar.jsx"
 export default function App() {
 return (
 <>
-  <ScrollToTop />
+  {/* <ScrollToTop />
   <Top />
   <Navbar />
   <Routes>
@@ -50,8 +52,8 @@ return (
   </Routes>
   <AdvCard />
   <FooterDetails />
-  <Footer /> 
-  
+  <Footer />  */}
+  <AdminApp/>
 
 </>
 
@@ -59,12 +61,12 @@ return (
 }
 
 
- function ScrollToTop() {
- const { pathname } = useLocation();
+  function ScrollToTop() {
+  const { pathname } = useLocation();
 
- useEffect(() => {
- window.scrollTo(0, 0);
- }, [pathname]);
+  useEffect(() => {
+  window.scrollTo(0, 0);
+  }, [pathname]);
 
- return null;
- }
+  return null;
+  }

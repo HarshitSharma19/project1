@@ -6,18 +6,25 @@ class ProductController{
     createProduct = (Data)=>{
         return new Promise((resolve , reject)=>{
             try{
-                const data = ProductModel(Data);
-                data.save();
-                resolve({
-                    msg : "Data Created Successfully",
-                    status : 1
-                })
-            }catch(error){
-                reject({
-                    msg : "Data cannot be Created. Please try Again",
-                    status : 0
-                })
-            }
+                if(Data.name == undefined || Data.image == undefined){
+                    reject({
+                        msg: "Data cannot be Created. Please try Again",
+                        status: 0
+                    })
+                }else{
+                    const data = ProductModel(Data);
+                    data.save();
+                    resolve({
+                        msg: "Data Created Successfully",
+                        status: 1
+                    });
+                }
+                }catch(error){
+                    reject({
+                        msg: "Data cannot be Created. Please try Again",
+                        status: 0
+                    })
+                }
         })
     }
     /*---------------------------------------------------------*/

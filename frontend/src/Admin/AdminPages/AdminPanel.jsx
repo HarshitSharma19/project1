@@ -1,6 +1,6 @@
 import React from 'react'
-import DropDown from '../AdminComponents/DropDown'
-import ANavbar from '../AdminComponents/ANavbar'
+import DropDown from '../AdminComponents/DropDown.jsx'
+import ANavbar from '../AdminComponents/ANavbar.jsx'
 
 
 export default function AdminPanel(props) {

@@ -7,9 +7,9 @@ import cors from "cors";
 import { AdminLogin } from "./Routes/AdminLogin.js";
 import { UserLogin } from "./Routes/UserLogin.js";
 import { AdminCategoryOperation } from "./Routes/AdminCategoryOperation.js";
-// import { AdminProductOperation } from "./Routes/AdminProductOperation.js";
+import { AdminProductOperation } from "./Routes/AdminProductOperation.js";
 import { Auth } from "./Middleware/Auth.js";
-// import { FetchData } from "./Routes/FetchData.js";
+import { AdminBrandOperation } from "./Routes/AdminBrandOperation.js"
 /*---------------------------------------------------------*/
 /*---------------------------------------------------------*/
 dotenv.config({
@@ -30,18 +30,20 @@ if (ConnStatus) {
     const App = Express();
 
     /*ADMIN LOGIN PENDING*/
-    App.use(bodyParser.json())
+    App.use(bodyParser.json({
+        limit: "50mb"
+    }))
     App.use(cors({ origin: "*" }))
     App.use("/admin-panel", AdminLogin)
     /*ADMIN LOGIN DONE*/
 
     /*ADMIN CURD OPR*/
     App.use("/admin-panel", Auth, AdminCategoryOperation)
-    // App.use("/admin-panel", Auth , AdminProductOperation)
+    App.use("/admin-panel", Auth, AdminProductOperation)
+    App.use("/admin-panel", Auth, AdminBrandOperation)
     /*ADMIN CURD OPR*/
 
     /*USER LOGIN PENDING*/
-    // App.use("*", FetchData)
     App.use("/user", UserLogin)
     /*USER LOGIN DONE*/
 

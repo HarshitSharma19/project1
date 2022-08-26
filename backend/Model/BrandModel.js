@@ -10,7 +10,8 @@ const Schema = mongoose.Schema({
     },
     logo: {
         type: String,
-        require: true
+        require: true,
+        unique: true
     },
     status: {
         type: Boolean,
