@@ -7,8 +7,9 @@ import cors from "cors";
 import { AdminLogin } from "./Routes/AdminLogin.js";
 import { UserLogin } from "./Routes/UserLogin.js";
 import { AdminCategoryOperation } from "./Routes/AdminCategoryOperation.js";
-import { AdminProductOperation } from "./Routes/AdminProductOperation.js";
+// import { AdminProductOperation } from "./Routes/AdminProductOperation.js";
 import { Auth } from "./Middleware/Auth.js";
+// import { FetchData } from "./Routes/FetchData.js";
 /*---------------------------------------------------------*/
 /*---------------------------------------------------------*/
 dotenv.config({
@@ -36,10 +37,11 @@ if (ConnStatus) {
 
     /*ADMIN CURD OPR*/
     App.use("/admin-panel", Auth, AdminCategoryOperation)
-    App.use("/admin-panel", Auth , AdminProductOperation)
+    // App.use("/admin-panel", Auth , AdminProductOperation)
     /*ADMIN CURD OPR*/
 
     /*USER LOGIN PENDING*/
+    // App.use("*", FetchData)
     App.use("/user", UserLogin)
     /*USER LOGIN DONE*/
 

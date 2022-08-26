@@ -9,7 +9,8 @@ function Encrypter(data){
 function Decrypter(data){
     return CryptoJS.AES.decrypt(data , process.env.SEC_KEY).toString(CryptoJS.enc.Utf8)
 }
+
 /*---------------------------------------------------------*/
 /*---------------------------------------------------------*/
-export{Encrypter , Decrypter};
+export{Encrypter , Decrypter };
 /*---------------------------------------------------------*/
