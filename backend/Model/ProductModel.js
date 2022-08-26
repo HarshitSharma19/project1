@@ -3,41 +3,49 @@ import mongoose from "mongoose";
 /*---------------------------------------------------------*/
 /*---------------------------------------------------------*/
 const Schema = mongoose.Schema({
-    Name : {
+    name : {
         type: String,
         length: 30,
         require: true
     },
-    Details : {
+    details : {
         type: String,
-        length: 200,
+        length: 500,
         require: true
     },
-    Weight : {
+    weight : {
         type: Number,
         require: true
     },
-    Price : {
+    price : {
         type: Number,
         require: true
     },
-    Discount : {
+    discount : {
         type: Number,
         require: false
     },
-    Image : {
+    image : {
         type: String,
         require: true
     },
-    Rating : {
+    rating : {
         type: Number,
         min: 0,
         max: 5,
         require: false
     },
-    best_seller: {
+    homepage: {
         type: Boolean,
         default: false
+    },
+    status: {
+        type : Boolean,
+        default : true
+    },
+    slug: {
+        type : String,
+        unique: false
     }
 })
 /*---------------------------------------------------------*/
