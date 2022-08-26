@@ -9,7 +9,7 @@ export default function ViewCategory() {
       <div className=' h-14 text-2xl flex items-center justify-center text-gray-700'> View Categories</div>
       <div className=' pt-1'>
         <Link to="/admin-panel/category/add"><button>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="#54a0ff" viewBox="0 0 24 24" stroke="white" strokeWidth="1">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-14 w-14" fill="#54a0ff" viewBox="0 0 24 24" stroke="white" strokeWidth="1">
           <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
          </svg>
         </button></Link>

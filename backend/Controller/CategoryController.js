@@ -5,6 +5,7 @@ class CategoryController {
     /*---------------------------------------------------------*/
     createCategory = (Data) => {
         return new Promise((resolve, reject) => {
+            try{
             if(Data.name == undefined || Data.image == undefined){
                 reject({
                     msg: "Data cannot be Created. Please try Again",
@@ -17,6 +18,12 @@ class CategoryController {
                     msg: "Data Created Successfully",
                     status: 1
                 });
+            }
+            }catch(error){
+                reject({
+                    msg: "Data cannot be Created. Please try Again",
+                    status: 0
+                })
             }
         })
     }
