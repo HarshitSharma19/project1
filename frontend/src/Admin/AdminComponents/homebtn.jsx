@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Switch } from '@headlessui/react'
 
-export default function SwitchBtn({flag}) {
-  const [enabled, setEnabled] = useState(flag)
+export default function HomeBtn({home}) {
+  const [enabled, setEnabled] = useState(home)
   
   return (
     <Switch

@@ -5,19 +5,26 @@ class BrandController{
     /*---------------------------------------------------------*/
     createBrand = (Data)=>{
         return new Promise((resolve , reject)=>{
-            if(Data.name == undefined || Data.logo == undefined){
-                reject({
-                    msg: "Data cannot be Created. Please try Again",
-                    status: 0
-                })
-            }else{
-                const data = BrandModel(Data);
-                data.save();
-                resolve({
-                    msg: "Data Created Successfully",
-                    status: 1
-                });
-            }
+            try{
+                if(Data.name == undefined || Data.image == undefined){
+                    reject({
+                        msg: "Data cannot be Created. Please try Again",
+                        status: 0
+                    })
+                }else{
+                    const data = BrandModel(Data);
+                    data.save();
+                    resolve({
+                        msg: "Data Created Successfully",
+                        status: 1
+                    });
+                }
+                }catch(error){
+                    reject({
+                        msg: "Data cannot be Created. Please try Again",
+                        status: 0
+                    })
+                }
         })
     }
     /*---------------------------------------------------------*/
