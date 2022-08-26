@@ -1,3 +1,4 @@
+
 import { useLocation,Route,Routes } from "react-router-dom"
 import React,{ useEffect} from "react"
 
@@ -50,9 +51,8 @@ return (
   </Routes>
   <AdvCard />
   <FooterDetails />
-
-  <Footer />
-
+  <Footer /> 
+  
 
 </>
 
@@ -60,12 +60,12 @@ return (
 }
 
 
-function ScrollToTop() {
-const { pathname } = useLocation();
+ function ScrollToTop() {
+ const { pathname } = useLocation();
 
-useEffect(() => {
-window.scrollTo(0, 0);
-}, [pathname]);
+ useEffect(() => {
+ window.scrollTo(0, 0);
+ }, [pathname]);
 
-return null;
-}
+ return null;
+ }

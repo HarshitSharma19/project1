@@ -14,12 +14,9 @@ export default function AdminPanel(props) {
         <DropDown/>
         </div>
         <div className='w-[80%] ml-[20%]'>
-            {props.com}
+          {props.com}
         </div>
       </div> 
-     {/* <div><ANavbar/></div> */}
-     
-  
   </div>
   )
 }
