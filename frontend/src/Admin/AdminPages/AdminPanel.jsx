@@ -13,7 +13,7 @@ export default function AdminPanel(props) {
         <div className='w-[20%] fixed top-13 left-0 '>
         <DropDown/>
         </div>
-        <div className='w-[80%] ml-[20%]'>
+        <div className=' w-[80%] ml-[20%]'>
           {props.com}
         </div>
       </div> 
