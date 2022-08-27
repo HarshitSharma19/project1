@@ -9,8 +9,6 @@ import AddProducts from './AdminComponents/Product/AddProducts.jsx'
 import ViewProducts from './AdminComponents/Product/ViewProducts.jsx'
 import AddBrand from './AdminComponents/Brand/AddBrand.jsx'
 import ViewBrand from './AdminComponents/Brand/ViewBrand.jsx'
-import AddRating from './AdminComponents/Rating/AddRating.jsx'
-import ViewRating from './AdminComponents/Rating/ViewRating.jsx'
 
 export default function AdminApp() {
   return (
@@ -24,8 +22,7 @@ export default function AdminApp() {
       <Route path ='/admin-panel/products/view' element={<AdminPanel com={<ViewProducts/>}/>}/>
       <Route path ='/admin-panel/brand/add' element={<AdminPanel com={<AddBrand/>}/>}/>
       <Route path ='/admin-panel/brand/view' element={<AdminPanel com={<ViewBrand/>}/>}/>
-      <Route path ='/admin-panel/rating/add' element={<AdminPanel com={<AddRating/>}/>}/>
-      <Route path ='/admin-panel/rating/view' element={<AdminPanel com={<ViewRating/>}/>}/>
+     
     </Routes>
     </>
     )

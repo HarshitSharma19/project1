@@ -7,10 +7,9 @@ import { Link } from 'react-router-dom'
 export default function ViewBrand() {
   const [data , setData] = useState([]);
   const Data = data.map((a, i)=>{
-    return <BrandList homepage={a.homepage} status={a.status} key={i} sno={i} name={a.name} logo={a.logo}/>
+    return <BrandList id={a._id}  created={a.created_at} status={a.status} key={i} sno={i} name={a.name} logo={a.logo}/>
   })
 
-  
   const fetchData = async() => {
     await axios.get("http://localhost:4000/admin-panel/brand/view", {
       headers: {
@@ -28,9 +27,9 @@ export default function ViewBrand() {
   }, [])
   return (
     <>
-      <div className='flex border-b-2 justify-between px-4 py-2 ' >
+      <div className='flex border-b-2 justify-between px-4 py-2  ' >
           <div className=' h-14 text-2xl flex items-center justify-center text-gray-700'> View Brand</div>
-          <div className=' pt-1'>
+          <div className='pt-1'>
             <Link to="/admin-panel/category/add">
               <button>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-14 w-14" fill="#54a0ff" viewBox="0 0 24 24" stroke="white" strokeWidth="1">
@@ -40,22 +39,26 @@ export default function ViewBrand() {
             </Link>
         </div>
       </div>
-      <div className='mt-6 mx-10 '>
-        <table className="table-auto text-center w-full ">
-          <thead className='border-b-2'>
-            <tr className='h-12 text-slate-700 font-semibold text-md'>
-              <td>S.No</td>
-              <td>Name</td>
-              <td>Logo</td>
-              <td>Status</td>
-              <td>Home Page</td>
-              <td>Created_at</td>
-              <td>Action</td>
-            </tr>
-          </thead>
-        </table>
+
+      <div className='mb-8'>
+        <div className='mt-6 mx-10 '>
+          <table className="table-auto text-center w-full ">
+            <thead className='border-b-2'>
+              <tr className='h-12 text-slate-700 font-semibold text-md'>
+                <td className='w-5'>S.No</td>
+                <td className='w-[120px]'>Name</td>
+                <td className='w-52'>Logo</td>
+                <td className='w-28'>Status</td>
+                <td className='w-48'>Created_at</td>
+                <td className='w-32'>Action</td>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        {Data}
       </div>
-      {Data}
+      
+     
     </>
   )
 }

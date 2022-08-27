@@ -20,9 +20,9 @@ export default function AddBrand() {
           authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyIjp7IkVtYWlsIjoiaGFyc2hpdHNoYXJtYTcyNEBnbWFpbC5jb20iLCJQYXNzd29yZCI6ImhhcnNoaXQxMjMifSwiaWF0IjoxNjYxNDkxNTE2fQ.hw5TIPPnTON4IlgzewFl9WioJk9nrfvRF1BDBAqjvTg"
         }
       }).then((success) => {
-        console.log(success)
+        console.log(success.data.msg)
       }).catch((error) => {
-        console.log(error)
+        console.log(error.data.msg)
       })
     event.preventDefault()
   }
@@ -48,13 +48,13 @@ export default function AddBrand() {
                   </td>
                 </tr>
                 <tr className='h-26 border-b-2'>
-                  <td className='flex items-start mt-4'>Upload Logo</td>
-                  <td className=' mt-6 pt-4 pb-20'><Dropzone event={getValue} /></td>
+                  <td className='flex items-start mt-4'> Logo</td>
+                  <td className='pt-6 pb-20'><Dropzone event={getValue} /></td>
                 </tr>
                 <tr>
                   <td className='h-28 text-end' colSpan={2} >
-                    <input type={"submit"} className='bg-[#009432] text-white  mt-16 px-10 py-1.5 rounded-2xl' />
-                    <input type={"button"} className='bg-[#009432] text-white ml-8 px-10 py-1.5 rounded-2xl' />
+                    <input type={"submit"} value='Submit' className='bg-[#009432] text-white cursor-pointer  mt-16 px-10 py-1.5 rounded-2xl' />
+                    <input type="reset" value='Reset' className='bg-[#009432] text-white ml-8 px-10 py-1.5 rounded-2xl cursor-pointer' />
                   </td>
                 </tr>
               </tbody>

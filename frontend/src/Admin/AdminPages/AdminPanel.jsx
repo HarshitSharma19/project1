@@ -8,7 +8,7 @@ export default function AdminPanel(props) {
   return (
 
     <div className='h-[100vh] overflow-x-hidden'>
-      <div className='sticky top-0'><ANavbar/></div>
+      <div className='sticky top-0 z-10'><ANavbar/></div>
       <div className='flex'>
         <div className='w-[20%] fixed top-13 left-0 '>
         <DropDown/>

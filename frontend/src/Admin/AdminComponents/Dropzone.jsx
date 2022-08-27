@@ -14,8 +14,7 @@ export default function Dropzone(props){
         const fileReader = new FileReader();
         fileReader.readAsDataURL(file)
         fileReader.onload = (data) =>{
-          console.log(data)
-            setImg(data.target.result)
+          setImg(data.target.result)
         }
     }
     function Trigger(){
@@ -23,9 +22,9 @@ export default function Dropzone(props){
     }
   return (
     <>
-      <div style={{width:"500px",height:"500px",margin:"auto",display:"flex",flexDirection:"column",justifyContent:"space-around"}}>
+      <div style={{width:"385px",height:"350px",display:"flex",flexDirection:"column",justifyContent:"space-around"}}>
         <input type="file" onChange={(event)=>{fileHandler(event)}} ref={ref} hidden/>
-        <img style={{width:"450px",height:"300px"}} src={img} onClick={Trigger}/>
+        <img style={{width:"385px",height:"350px"}} src={img} onClick={Trigger}/>
       </div>  
     </>
   )
