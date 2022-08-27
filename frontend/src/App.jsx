@@ -26,7 +26,7 @@ import Navbar from "./Components/Navbar.jsx"
 export default function App() {
 return (
 <>
-  <ScrollToTop />
+   <ScrollToTop />
   <Top />
   <Navbar />
   <Routes>
@@ -48,7 +48,7 @@ return (
   <AdvCard />
   <FooterDetails />
 
-  <Footer />
+  <Footer /> 
 
 
 </>

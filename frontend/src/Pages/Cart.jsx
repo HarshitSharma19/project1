@@ -1,8 +1,8 @@
 
-import React from 'react'
 import Container from '../Components/Container.jsx'
 import Philips from '../Images/philips_hue.svg'
 import Applemac from '../Images/apple_macbook.png'
+
 
 
 export default function Cart() {
@@ -45,17 +45,17 @@ export default function Cart() {
         </thead>
         <tbody>
         <tr className='border-b-4'>
-            <td><img src={Philips} alt="product" /></td>
+            <td><img src={Philips} alt="product" className='m-auto'/></td>
             <td colSpan={2} className='font-bold'><center>Philips Hue 7W BR30 Connected Downlight Lamp</center></td>
             <td className='font-bold'>$998</td>
-            <td colSpan={2}><button className='border-none font-bold text-blue-700 text-3xl bg-slate-300 w-[40px]'>-</button><button className='border-none font-bold bg-slate-300 text-3xl'>0</button><button className='border-none text-3xl font-bold bg-slate-300 w-[40px] text-blue-700'>+</button></td>
+            <td colSpan={2}><button className='border-none font-bold text-blue-700 text-3xl bg-slate-300 w-[40px]'  >-</button><button className='border-none font-bold bg-slate-300 text-3xl'>0</button><button className='border-none text-3xl font-bold bg-slate-300 w-[40px] text-blue-700' >+</button></td>
             <td className='font-bold'>$499</td>
           </tr>
           <tr className='border-b-2'>
             <td><img src={Applemac} alt="product" /></td>
             <td className='font-bold' colSpan={2}><center>Apple Macbook Pro</center></td>
             <td className='font-bold'>$998</td>
-            <td colSpan={2}><button className='border-none font-bold text-blue-700 text-3xl bg-slate-300 w-[40px]'>-</button><button className='border-none font-bold bg-slate-300 text-3xl'>0</button><button className='border-none text-3xl font-bold bg-slate-300 w-[40px] text-blue-700'>+</button></td>
+            <td colSpan={2}><button className='border-none font-bold text-blue-700 text-3xl bg-slate-300 w-[40px]' >-</button><button className='border-none font-bold bg-slate-300 text-3xl'>0</button><button className='border-none text-3xl font-bold bg-slate-300 w-[40px] text-blue-700' >+</button></td>
             <td className='font-bold'>$499</td>
           </tr>
           
@@ -95,4 +95,3 @@ export default function Cart() {
     </>
   )
 }
-
