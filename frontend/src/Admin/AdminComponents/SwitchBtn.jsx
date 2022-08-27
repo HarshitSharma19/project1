@@ -3,7 +3,6 @@ import { Switch } from '@headlessui/react'
 
 export default function SwitchBtn({flag}) {
   const [enabled, setEnabled] = useState(flag)
-  
   return (
     <Switch
       checked={enabled}
