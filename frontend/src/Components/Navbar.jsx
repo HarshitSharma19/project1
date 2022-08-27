@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-
+import Logo from '../Images/iSHOP Logo.svg'
 
 import { Link } from 'react-router-dom';
 import Container from './Container.jsx'
@@ -17,9 +17,13 @@ const Navbar = () => {
   return (
 
     <Container>
+      
+        
+        <div className=' m-5 flex justify-center' >
+          <img src={Logo} alt="" />
+        </div>
 
-
-      <div className='Navbar  md:font-bold  ' >
+      <div className='Navbar bg-rose-100	  md:font-bold  ' >
         <ul className='flex  md:flex justify-center' >
           <li className='p-6 cursor-pointer  hover:-translate-y-1 hover:scale-110 duration-300  hover:text-blue-500 '><Link to="/"> HOME</Link></li>
             <li className='p-6 cursor-pointer  hover:-translate-y-1 hover:scale-110 duration-300 border relative ' >
@@ -27,36 +31,36 @@ const Navbar = () => {
             <div className=' w-[550px] m-auto submenu bg-[#F1F1F1] flex absolute justify-between'>
 
               <ul className='  text-left  border-2 leading-6  ' >
-                <li className='font-bold  ' >Accessories</li>
-                <li>AirPort & Wireless</li>
-                <li>AppleCare Bags</li>
-                <li>Shells & Sleeves</li>
-                <li>Business & Security</li>
-                <li>Cables & Docks</li>
-                <li>Cameras & Video</li>
-                <li>Car & Travel</li>
-                <li>Cases & Films</li>
+                <li className='md:font-bold ' >Accessories</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' >AirPort & Wireless</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' >AppleCare Bags</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' >Shells & Sleeves</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' >Business & Security</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' >Cables & Docks</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' >Cameras & Video</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' >Car & Travel</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' >Cases & Films</li>
               </ul>
 
               <ul className=' w-300 text-left border-2 leading-6  ' >
-                <li className='font-bold' >Category</li>
-                <li>Charging Devices</li>
-                <li>Connected Home</li>
-                <li>Device Care</li>
-                <li> Display & Graphic</li>
-                <li> Fitness & Sport</li>
-                <li> Headphones</li>
-                <li> HealthKit</li>
+                <li className='md:font-bold' >Category</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold  hover:-translate-y-1 hover:scale-110 duration-300' >Charging Devices</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold  hover:-translate-y-1 hover:scale-110 duration-300' >Connected Home</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold  hover:-translate-y-1 hover:scale-110 duration-300' >Device Care</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold  hover:-translate-y-1 hover:scale-110 duration-300' > Display & Graphic</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold  hover:-translate-y-1 hover:scale-110 duration-300' > Fitness & Sport</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold  hover:-translate-y-1 hover:scale-110 duration-300' > Headphones</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold  hover:-translate-y-1 hover:scale-110 duration-300' > HealthKit</li>
               </ul>
               <ul className='w-300 border-2 text-left leading-6  ' >
-                <li className='font-bold' >Category</li>
-                <li> Mice & Keyboards</li>
-                <li> Music Creation</li>
-                <li> Networking & Server</li>
-                <li>MOBILES</li>
-                <li>TABLETS</li>
-                <li>LAPTOPS</li>
-                <li>WATCHES</li>
+                <li className='md:font-bold' >Category</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' > Mice & Keyboards</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' > Music Creation</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' > Networking & Server</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' >Mobiles</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' >Tablets</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' >Laptops</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' >Watches</li>
               </ul>
             </div>
           </li>

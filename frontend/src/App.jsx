@@ -31,7 +31,7 @@ import AdminApp from "./Admin/AdminApp"
 export default function App() {
 return (
 <>
-  {/* <ScrollToTop />
+ <ScrollToTop />
   <Top />
   <Navbar />
   <Routes>
@@ -52,7 +52,7 @@ return (
   </Routes>
   <AdvCard />
   <FooterDetails />
-  <Footer />  */}
+  <Footer /> 
   <AdminApp/>
 
 </>

@@ -79,7 +79,7 @@ return (
     </Container>
   </div>
   <Container>
-    <div className=' flex justify-center flex justify-end mt-5'>
+    <div className=' 	 m-2 flex justify-center'>
       <img className='px-2' src={visa} alt="" />
       <img className='px-2' src={wester} alt="" />
       <img className='px-2' src={paypal} alt="" />
