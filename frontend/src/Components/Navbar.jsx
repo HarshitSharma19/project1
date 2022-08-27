@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
+
 import { Link } from 'react-router-dom';
 import Container from './Container.jsx'
 
@@ -18,13 +19,12 @@ const Navbar = () => {
     <Container>
 
 
-      <div >
+      <div className='Navbar  md:font-bold  ' >
         <ul className='flex  md:flex justify-center' >
           <li className='p-6 cursor-pointer  hover:-translate-y-1 hover:scale-110 duration-300  hover:text-blue-500 '><Link to="/"> HOME</Link></li>
-          <li className='p-6 cursor-pointer  hover:-translate-y-1 hover:scale-110 duration-300  hover:text-blue-500 ' ><Link to="/offers"> OFFERS</Link></li>
-          <li className='p-6 border cursor-pointer group hover:text-blue-500  hover:-translate-y-1 hover:scale-110 duration-300  relative ' >
+            <li className='p-6 cursor-pointer  hover:-translate-y-1 hover:scale-110 duration-300 border relative ' >
             <Link to="/store"> STORE</Link>
-            <div style={{ width: "550px", margin: "auto" }} className='  bg-[#F1F1F1] hidden group-hover:flex hover:flex  left-[-200px] top-16  absolute text-center border-2 border-indigo-500/100 text-black  justify-between'>
+            <div className=' w-[550px] m-auto submenu bg-[#F1F1F1] flex absolute justify-between'>
 
               <ul className='  text-left  border-2 leading-6  ' >
                 <li className='font-bold  ' >Accessories</li>
@@ -53,14 +53,16 @@ const Navbar = () => {
                 <li> Mice & Keyboards</li>
                 <li> Music Creation</li>
                 <li> Networking & Server</li>
+                <li>MOBILES</li>
+                <li>TABLETS</li>
+                <li>LAPTOPS</li>
+                <li>WATCHES</li>
               </ul>
             </div>
           </li>
-          <li className='p-6 cursor-pointer  hover:-translate-y-1 hover:scale-110 duration-300 hover:text-blue-500 ' ><Link to="/mobiles"> MOBILES</Link></li>
-          <li className='p-6 cursor-pointer  hover:-translate-y-1 hover:scale-110 duration-300 hover:text-blue-500 ' ><Link to="/tablets"> TABLETS</Link></li>
-          <li className='p-6 cursor-pointer  hover:-translate-y-1 hover:scale-110 duration-300 hover:text-blue-500 ' ><Link to="/laptops"> LAPTOPS</Link></li>
-          <li className='p-6 cursor-pointer  hover:-translate-y-1 hover:scale-110 duration-300 hover:text-blue-500 ' ><Link to="/watches"> WATCHES</Link></li>
-          <li className='p-6 cursor-pointer  hover:-translate-y-1 hover:scale-110 duration-300 hover:text-blue-500 ' ><Link to="/accessories"> ACCESSORIES</Link></li>
+          <li className='p-6 cursor-pointer  hover:-translate-y-1 hover:scale-110 duration-300  hover:text-blue-500 ' ><Link to="/offers"> OFFERS</Link></li>
+        
+          
 
         </ul>
       </div>
@@ -81,7 +83,7 @@ const Navbar = () => {
           <li className='p-5 text-lg font-bold border-b border-black'>TABLETS</li>
           <li className='p-5 text-lg font-bold border-b border-black'>LAPTOPS</li>
           <li className='p-5 text-lg font-bold border-b border-black'>WATCHES</li>
-          <li className='p-5 text-lg font-bold border-b border-black'>ACCESORIES</li>
+          
 
         </ul>
       </div>
