@@ -3,6 +3,7 @@ import Container from './Container.jsx'
 import { Link } from 'react-router-dom'
 
 export default function Top(props) {
+    let status=0;
 return (
 <Container>
     <div className="container mx-auto">
@@ -43,7 +44,15 @@ return (
                         <path strokeLinecap="round" strokeLinejoin="round"
                             d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                     </svg>
-                    <Link to="/profile" >My Profile</Link>
+                    {(status == 1)?
+                    <>
+                        <Link to="/profile" >My Profile</Link>
+                    </> 
+                    : 
+                    <>
+                        <p><span className='mr-5'> <Link to="/Login" >Login</Link></span><span><Link to="/signup" >SignUp</Link></span></p>
+                    </>
+                    }
                     
                 </div>
                 <div className='p-3 flex cursor-pointer'>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import download from '../Components/Images/bg (1).avif'
+import download from '../Images/bg (1).avif'
 
 export default function Registration() {
   return (
@@ -40,7 +40,7 @@ export default function Registration() {
                 </div>
                 <div className="mt-6 text-grey-dark">
                     Already have an account?
-                    <Link className="text-blue-600 hover:underline" to="#">
+                    <Link className="text-blue-600 hover:underline" to="/Login">
                         Log in
                     </Link>
                 </div>

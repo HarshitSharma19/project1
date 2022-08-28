@@ -22,20 +22,30 @@ import FooterDetails from './Components/FooterDetails'
 import Footer from "./Components/Footer.jsx"
 import Top from "./Components/Top.jsx"
 import Navbar from "./Components/Navbar.jsx"
-
-import AdminApp from "./Admin/AdminApp"
-
-
+import Registration from "./Section/Registration";
+import UserLoginPage from "./Section/UserLoginPage";
 
 
-export default function App() {
-return (
-<>
+// import AdminApp from "./Admin/AdminApp"
 
-  <ScrollToTop />
 
-  <Top />
-  <Navbar />
+
+
+
+  export default function App() {
+    let { pathname } = useLocation();
+    console.log(pathname)
+    return (
+      <>
+        <ScrollToTop />
+        {pathname !== "/Login" && pathname !== "/signup" ? (
+          <>
+            <Top />
+            <Navbar />
+          </>
+        ) : (
+          ""
+        )}
   <Routes>
     <Route path="*" element={<Error />} />
     <Route element={<MainPage />} path="/"/>
@@ -51,15 +61,20 @@ return (
     <Route element={<Watches />} path="/watches"/>
     <Route element={<Checkout />} path="/checkout"/>
     <Route element={<Offers />} path="/offers"/>
+    <Route element={<Registration />} path="/signup" />
+    <Route element={<UserLoginPage />} path="/login" />
   </Routes>
-  <AdvCard />
-  <FooterDetails />
-  <Footer /> 
-  <AdminApp/>
-
-</>
-
-)
+  {pathname !== "/Login" && pathname !== "/signup" ? (
+        <>
+          <AdvCard />
+          <FooterDetails />
+          <Footer />
+        </>
+      ) : (
+        ""
+      )}
+    </>
+  );
 }
 
 
