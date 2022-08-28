@@ -24,7 +24,7 @@ export default function advCard() {
             <div className='font-bold flex justify-center my-20'>
                 <div className="first:p-6 max-w-sm  text-center items-center bg-white ">
                     <div className='text-center'> 
-                        <img className="p-5 m-auto items-center rounded-t-lg" src={appleship} alt="product" />
+                        <img className="p-5 m-auto items-center rounded-t-lg text-red-600" src={appleship} alt="product" />
                     </div>
                     <h5 className="first:mb-2 text-2xl font-semibold tracking-tight  text-black">FREE SHIPPING</h5>
                     <p className="first:mb-3 font-normal  mt-10 text-gray-900 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus officiis sed iste expedita velit. Architecto possimus suscipit quibusdam maxime et quod culpa molestiae, eius cupiditate ratione explicabo repellendus expedita sed.</p> 

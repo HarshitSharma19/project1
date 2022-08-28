@@ -14,7 +14,7 @@
     </pattern>
   </defs>
   <g id="philips_hue" transform="translate(-422 -649)">
-    <rect id="Rectangle_14" data-name="Rectangle 14" className="cls-1" width="130" height="130" transform="translate(422 649)"/>
-    <rect id="Rectangle_5" data-name="Rectangle 5" className="cls-2" width="130" height="130" transform="translate(422 649)"/>
+    <rect id="Rectangle_14" data-name="Rectangle 14" class="cls-1" width="130" height="130" transform="translate(422 649)"/>
+    <rect id="Rectangle_5" data-name="Rectangle 5" class="cls-2" width="130" height="130" transform="translate(422 649)"/>
   </g>
 </svg>
