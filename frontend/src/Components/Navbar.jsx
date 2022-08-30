@@ -1,6 +1,9 @@
+
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import download from '../Images/iSHOPLogo.svg'
+import Logo from '../Images/iSHOP Logo.svg'
+
+import { Link } from 'react-router-dom';
 import Container from './Container.jsx'
 
 const Navbar = () => {
@@ -12,7 +15,6 @@ const Navbar = () => {
 
 
   return (
-
 
     <Container>
       
@@ -67,20 +69,32 @@ const Navbar = () => {
           
 
         </ul>
-
       </div>
-      <ul className={nav ? 'fixed text-center left-0 top-60  w-[100%] h-full border-r  ease-in-out duration-500' : 'ease-in-out duration-500 fixed left-[-100%]'}>
-          <li className='p-4 border-b border-gray-600'>Home</li>
-          <li className='p-4 border-b border-gray-600'>STORE</li>
-          <li className='p-4 border-b border-gray-600'>IPHONE</li>
-          <li className='p-4 border-b border-gray-600'>IPAD</li>
-          <li className='p-4 border-b border-gray-600'>MACBOOK</li>
-          <li className='p-4 border-b border-gray-600'>ACCESORIES</li>
+      <div className=' black md:bg-none flex justify-between md:hidden items-center h-24 max-w-[1240px] mx-auto px-4 text-b'>
+        <div onClick={handleNav} className='md:hidden z-10'>
+          {!nav ? <AiOutlineMenu /> : <AiOutlineClose />}
+        </div>
 
-      </ul>
-    </div>
-  </div>
-  </Container>
+        <ul className={
+          !nav
+            ? 'hidden'
+            : 'absolute top-0 left-0 w-full h-screen bg-gradient-to-r from-green-400 to-blue-500 flex flex-col justify-center  items-center'
+        }>
+          <li className='p-5 text-lg font-bold border-b border-black'>HOME</li>
+          <li className='p-5 text-lg font-bold border-b border-black'>OFFER</li>
+          <li className='p-5 text-lg font-bold border-b border-black'>STORE</li>
+          <li className='p-5 text-lg font-bold border-b border-black'>MOBILES</li>
+          <li className='p-5 text-lg font-bold border-b border-black'>TABLETS</li>
+          <li className='p-5 text-lg font-bold border-b border-black'>LAPTOPS</li>
+          <li className='p-5 text-lg font-bold border-b border-black'>WATCHES</li>
+          
+
+        </ul>
+      </div>
+
+    </Container>
+
   )
 }
 export default Navbar;
+
