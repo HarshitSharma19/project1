@@ -26,7 +26,7 @@ const Navbar = () => {
       <div className='Navbar bg-rose-100	  md:font-bold  ' >
         <ul className='flex  md:flex justify-center' >
           <li className='p-6 cursor-pointer  hover:-translate-y-1 hover:scale-110 duration-300  hover:text-blue-500 '><Link to="/"> HOME</Link></li>
-            <li className='p-6 cursor-pointer  hover:-translate-y-1 hover:scale-110 duration-300 border relative ' >
+            <li className='p-6 cursor-pointer  hover:-translate-y-1 hover:scale-110 duration-300  relative ' >
             <Link to="/store"> STORE</Link>
             <div className=' w-[550px] m-auto submenu bg-[#F1F1F1] flex absolute justify-between'>
 
