@@ -12,59 +12,62 @@ const Navbar = () => {
 
 
   return (
-    <Container >
-    <div  >
-    <div className=' flex justify-center my-5 ' >
-            <div className=''>
-               <img className='justify-center'  src={download} alt="" />
-             </div>
-    </div>
-     <div >
-     <ul className='flex hidden md:flex justify-center' >
-         <li className='p-6 cursor-pointer' >HOME</li>
-         <li className='p-6 cursor-pointer relative ' >STORE
-         <div style={{width:"800px", margin:"auto"}} className=' hidden	 absolute text-center    border-2 border-indigo-500/100 text-black flex justify-between	 bg-white'>
-                     
-                        <ul className='w-300 hidden md:flex border-2 leading-8 border-indigo-500/100 ' >
-                          <li className='font-bold' >Accessories</li>
-                          <li>AirPort & Wireless</li>
-                          <li>AppleCare Bags</li>
-                          <li>Shells & Sleeves</li>
-                          <li>Business & Security</li>
-                          <li>Cables & Docks</li>
-                          <li>Accessories</li>
-                          <li>Cameras & Video</li>
-                          <li>Car & Travel</li>
-                          <li>Cases & Films</li>
-                        </ul>
-                       
-                        <ul className=' w-300 border-2 leading-8 border-indigo-500/100 ' >
-                          <li className='font-bold' >Category</li>
-                          <li>Charging Devices</li>
-                          <li>Connected Home</li>
-                          <li>Device Care</li>
-                          <li> Display & Graphic</li>
-                          <li> Fitness & Sport</li>
-                          <li> Headphones</li>
-                          <li> HealthKit</li>
-                        </ul>
-                        <ul className='w-300 border-2 leading-8 border-indigo-500/100 ' >
-                        <li className='font-bold' >Category</li>
-                          <li> Mice & Keyboards</li>
-                          <li> Music Creation</li>
-                          <li> Networking & Server</li>
-                        </ul>
-                       </div>
-         </li>
-         <li className='p-6 cursor-pointer'  >IPHONE</li>
-         <li className='p-6 cursor-pointer' >IPAD</li>
-         <li className='p-6 cursor-pointer' >MACBOOK</li>
-         <li className='p-6 cursor-pointer' >ACCESORIES</li>
-     </ul>
-  </div>
-  <div className=' flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-b'>
-      <div onClick={handleNav} className='block md:hidden'>
-          {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20} />}
+
+
+    <Container>
+      
+        
+        <div className=' m-5 flex justify-center' >
+          <img src={Logo} alt="" />
+        </div>
+
+      <div className='Navbar bg-rose-100	  md:font-bold  ' >
+        <ul className='flex  md:flex justify-center' >
+          <li className='p-6 cursor-pointer  hover:-translate-y-1 hover:scale-110 duration-300  hover:text-blue-500 '><Link to="/"> HOME</Link></li>
+            <li className='p-6 cursor-pointer  hover:-translate-y-1 hover:scale-110 duration-300  relative ' >
+            <Link to="/store"> STORE</Link>
+            <div className=' w-[550px] m-auto submenu bg-[#F1F1F1] flex absolute justify-between'>
+
+              <ul className='  text-left  border-2 leading-6  ' >
+                <li className='md:font-bold ' >Accessories</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' >AirPort & Wireless</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' >AppleCare Bags</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' >Shells & Sleeves</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' >Business & Security</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' >Cables & Docks</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' >Cameras & Video</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' >Car & Travel</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' >Cases & Films</li>
+              </ul>
+
+              <ul className=' w-300 text-left border-2 leading-6  ' >
+                <li className='md:font-bold' >Category</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold  hover:-translate-y-1 hover:scale-110 duration-300' >Charging Devices</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold  hover:-translate-y-1 hover:scale-110 duration-300' >Connected Home</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold  hover:-translate-y-1 hover:scale-110 duration-300' >Device Care</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold  hover:-translate-y-1 hover:scale-110 duration-300' > Display & Graphic</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold  hover:-translate-y-1 hover:scale-110 duration-300' > Fitness & Sport</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold  hover:-translate-y-1 hover:scale-110 duration-300' > Headphones</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold  hover:-translate-y-1 hover:scale-110 duration-300' > HealthKit</li>
+              </ul>
+              <ul className='w-300 border-2 text-left leading-6  ' >
+                <li className='md:font-bold' >Category</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' > Mice & Keyboards</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' > Music Creation</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' > Networking & Server</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' >Mobiles</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' >Tablets</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' >Laptops</li>
+                <li className='cursor-pointer md:font-normal hover:font-bold hover:-translate-y-1 hover:scale-110 duration-300' >Watches</li>
+              </ul>
+            </div>
+          </li>
+          <li className='p-6 cursor-pointer  hover:-translate-y-1 hover:scale-110 duration-300  hover:text-blue-500 ' ><Link to="/offers"> OFFERS</Link></li>
+        
+          
+
+        </ul>
+
       </div>
       <ul className={nav ? 'fixed text-center left-0 top-60  w-[100%] h-full border-r  ease-in-out duration-500' : 'ease-in-out duration-500 fixed left-[-100%]'}>
           <li className='p-4 border-b border-gray-600'>Home</li>
