@@ -1,16 +1,34 @@
 import axios from 'axios'
 import React from 'react'
-import SwitchBtn from '../SwitchBtn.jsx'
-export default function BrandList({name , created , logo , sno, status ,id}) {
-  function Delete(x){
-    axios.delete(`http://localhost:400/admin-panel/brand/delete`,
+import Button from '../Button.jsx'
+export default function BrandList({name , created , logo , sno ,id , status}) {
+  async function Delete(x){
+    await axios.delete(`http://localhost:4000/admin-panel/brand/delete/${x}}`,
     {
       params:{
         id: x
       },
       headers: {
+          authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyIjp7IkVtYWlsIjoiaGFyc2hpdHNoYXJtYTcyNEBnbWFpbC5jb20iLCJQYXNzd29yZCI6ImhhcnNoaXQxMjMifSwiaWF0IjoxNjYxNDkxNTE2fQ.hw5TIPPnTON4IlgzewFl9WioJk9nrfvRF1BDBAqjvTg",    
+       }
+      }
+    ).then((success)=>{
+      console.log(success)
+     
+    }).catch((error)=>{
+      console.log(error)
+    })
+  }
+
+  function Update(y){
+    axios.update(`http://localhost:4000/admin-panel/brand/update`,
+    {
+      params:{
+        id: y
+      },
+      headers: {
           authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyIjp7IkVtYWlsIjoiaGFyc2hpdHNoYXJtYTcyNEBnbWFpbC5jb20iLCJQYXNzd29yZCI6ImhhcnNoaXQxMjMifSwiaWF0IjoxNjYxNDkxNTE2fQ.hw5TIPPnTON4IlgzewFl9WioJk9nrfvRF1BDBAqjvTg",
-          'Access-Control-Allow-Origin': '`*`'
+          
        }
       }
     ).then((success)=>{
@@ -19,6 +37,8 @@ export default function BrandList({name , created , logo , sno, status ,id}) {
       console.log(error)
     })
   }
+  
+
   return (
     <>
       <div className='mt-4 mx-10 '>
@@ -27,12 +47,12 @@ export default function BrandList({name , created , logo , sno, status ,id}) {
           <tbody>
             <tr className='border-b'>
               <td className='w-11'>{sno}</td>
-              <td className='w-[151px]'>{name}</td>
-              <td  className='w-[260px] flex justify-center items-center'><img src={logo} alt=""   className='mb-2 w-[115px] h-[75px]'/></td>
-              <td className='w-[138px]'><SwitchBtn flag={status} /></td>
-              <td className='w-[240px]'>{created}</td>
+              <td className='w-[156px]'>{name}</td>
+              <td  className='w-[264px] flex justify-center items-center'><img src={logo} alt=""   className='mb-2 w-[1155x] h-[75px]'/></td>
+              <td className='w-[138px]'><Button Id={id}  status={status}/></td>
+              <td className='w-[248px]'>{created}</td>
               <td  className='w-[160px] flex justify-center items-center relative bottom-7'>
-                <button><svg xmlns="http://www.w3.org/2000/svg" className="ml-1 h-6 w-6 " fill="none" viewBox="0 0  24  24" stroke="currentColor" strokeWidth="2">
+                <button onClick={()=>Update(id)}><svg xmlns="http://www.w3.org/2000/svg" className="ml-1 h-6 w-6 " fill="none" viewBox="0 0  24  24" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                 </svg></button>
                 <button onClick={()=>{Delete(id)}}><svg xmlns="http://www.w3.org/2000/svg" className="ml-6 h-6 w-6 " fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
