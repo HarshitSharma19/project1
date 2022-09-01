@@ -6,7 +6,8 @@ import { ProductController } from "../Controller/ProductController.js";
 const AdminProductOperation = Express.Router();
 /*Create Opr*/
 AdminProductOperation.post("/products/add",async(req , res)=>{
-    await new ProductController().createProduct(req.body).then((success)=>{
+    const imageFile = req.files.image;
+    await new ProductController().createProduct(req.body , imageFile).then((success)=>{
         res.send(success).status(200);
     }).catch((error)=>{
         res.send(error).status(400);

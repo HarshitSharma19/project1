@@ -7,7 +7,8 @@ const AdminCategoryOperation = Express.Router();
 
 /*Create Opr*/
 AdminCategoryOperation.post("/category/add",async(req , res)=>{
-    await new CategoryController().createCategory(req.body).then((success)=>{
+    const imageFile = req.files.image;
+    await new CategoryController().createCategory(req.body , imageFile).then((success)=>{
         res.send(success).status(200);
     }).catch((error)=>{
         res.send(error).status(400);
