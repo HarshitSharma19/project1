@@ -37,7 +37,7 @@ class AdminController{
                 if(dbData != null){
                     const password = Decrypter(dbData.Password)
                     if(password == Data.Password && dbData.Email == Data.Email){
-                        const token = Jwt.sign({ User : Data},process.env.TOKEN_KEY)
+                        const token = Jwt.sign({ exp: Math.floor(Date.now()/1000) + (60 * 60) , User : Data},process.env.TOKEN_KEY)
                         resolve({
                             msg : "Login Success",
                             email : dbData.Email,
