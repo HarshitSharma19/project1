@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 html
 {
     scroll-behavior: smooth;
@@ -12,7 +13,6 @@ html
 .submenu{
  
     transition: 0.5s;
-   
     position: absolute;
     top: 73px;
     left:   -200px;

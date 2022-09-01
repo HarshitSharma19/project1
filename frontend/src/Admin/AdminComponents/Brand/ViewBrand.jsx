@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom'
 export default function ViewBrand() {
   const [data , setData] = useState([]);
   const Data = data.map((a, i)=>{
-    return <BrandList id={a._id}  created={a.created_at} status={a.status} key={i} sno={i} name={a.name} logo={a.logo}/>
+    return <BrandList id={a._id}  created={a.created_at} status={a.status} key={i} sno={i} name={a.name} logo={a.logo} />
+    
   })
 
   const fetchData = async() => {
@@ -30,7 +31,7 @@ export default function ViewBrand() {
       <div className='flex border-b-2 justify-between px-4 py-2  ' >
           <div className=' h-14 text-2xl flex items-center justify-center text-gray-700'> View Brand</div>
           <div className='pt-1'>
-            <Link to="/admin-panel/category/add">
+            <Link to="/admin-panel/brand/add">
               <button>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-14 w-14" fill="#54a0ff" viewBox="0 0 24 24" stroke="white" strokeWidth="1">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
