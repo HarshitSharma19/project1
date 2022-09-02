@@ -17,7 +17,7 @@ const Schema = mongoose.Schema({
         type: Boolean,
         default: true
     },
-    creater_at: {
+    created_at: {
         type: Date,
         default: Date.now()
     },

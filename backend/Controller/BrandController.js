@@ -12,13 +12,9 @@ class BrandController{
             const destination = __dirname + "/Brand" + imgName;
             const data = { ...Data , logo: imgName }
             try{
-                imgFile.mv(destination,(error)=>{
-                    reject({
-                        msg: "Cannot Get File",
-                        status: 0
-                    })
-                })
+
                 if(Data.name == undefined || imgFile.name == undefined){
+
                     reject({
                         msg: "Data cannot be Created. Please try Again",
                         status: 0
