@@ -4,10 +4,10 @@ import { BrandController } from "../Controller/BrandController.js";
 /*---------------------------------------------------------*/
 
 const AdminBrandOperation = Express.Router();
-
 /*Create Opr*/
 AdminBrandOperation.post("/brand/add",async(req , res)=>{
-    await new BrandController().createBrand(req.body).then((success)=>{
+    const imageFile = req.files.image;
+    await new BrandController().createBrand(req.body , imageFile).then((success)=>{
         res.send(success).status(200);
     }).catch((error)=>{
         res.send(error).status(400);

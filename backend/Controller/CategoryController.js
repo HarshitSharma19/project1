@@ -1,24 +1,36 @@
 /*---------------------------------------------------------*/
 import { CategoryModel } from "../Model/CategoryModel.js";
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 /*---------------------------------------------------------*/
 class CategoryController {
     /*---------------------------------------------------------*/
-    createCategory = (Data) => {
+    createCategory = (Data , imgFile) => {
         return new Promise((resolve, reject) => {
+            const __dirname = dirname(fileURLToPath(import.meta.url));
+            const imgName = Math.floor(Math.random() * 1000000)+ new Date().getTime() + imgFile.name
+            const destination = __dirname + "/Category" + imgName;
+            const data = { ...Data , image: imgName }
             try{
-            if(Data.name == undefined || Data.image == undefined){
-                reject({
-                    msg: "Data cannot be Created. Please try Again",
-                    status: 0
+                imgFile.mv(destination,(error)=>{
+                    reject({
+                        msg: "Cannot Get File",
+                        status: 0
+                    })
                 })
-            }else{
-                const data = CategoryModel(Data);
-                data.save();
-                resolve({
-                    msg: "Data Created Successfully",
-                    status: 1
-                });
-            }
+                if(Data.name == undefined || imgFile.name == undefined){
+                    reject({
+                        msg: "Data cannot be Created. Please try Again",
+                        status: 0
+                    })
+                }else{
+                    const saveData = CategoryModel(data);
+                    saveData.save();
+                    resolve({
+                        msg: "Data Created Successfully",
+                        status: 1
+                    });
+                }
             }catch(error){
                 reject({
                     msg: "Data cannot be Created. Please try Again",
@@ -41,6 +53,7 @@ class CategoryController {
                 resolve({
                     msg: "Data Found",
                     data: data,
+                    imgBaseUrl: `http://localhost:${process.env.PORT}/Category/`,
                     status: 1
                 })
             }
