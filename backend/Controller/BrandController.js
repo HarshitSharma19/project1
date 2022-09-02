@@ -6,7 +6,7 @@ class BrandController{
     createBrand = (Data)=>{
         return new Promise((resolve , reject)=>{
             try{
-                if(Data.name == undefined || Data.image == undefined){
+                if(Data.name == undefined || Data.logo == undefined){
                     reject({
                         msg: "Data cannot be Created. Please try Again",
                         status: 0

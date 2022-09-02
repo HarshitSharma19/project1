@@ -26,13 +26,14 @@ AdminBrandOperation.get("/brand/view",async(req , res)=>{
 /*READ Opr*/
 
 /*Delete Opr*/
-AdminBrandOperation.delete("/brand/view/:id",async(req , res)=>{
+AdminBrandOperation.delete("/brand/delete/:id",async (req , res)=>{
     const id = req.params.id;
     await new BrandController().deleteBrand(id).then((success)=>{
         res.send(success).status(200)
     }).catch((error)=>{
         res.send(error).status(400)
     })
+
 })
 /*Delete Opr*/
 
