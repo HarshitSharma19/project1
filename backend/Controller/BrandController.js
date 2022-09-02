@@ -1,26 +1,18 @@
 /*---------------------------------------------------------*/
 import { BrandModel } from "../Model/BrandModel.js";
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
 /*---------------------------------------------------------*/
 class BrandController{
     /*---------------------------------------------------------*/
-    createBrand = (Data ,imgFile)=>{
+    createBrand = (Data)=>{
         return new Promise((resolve , reject)=>{
-            const __dirname = dirname(fileURLToPath(import.meta.url));
-            const imgName = Math.floor(Math.random() * 1000000)+ new Date().getTime() + imgFile.name
-            const destination = __dirname + "/Brand" + imgName;
-            const data = { ...Data , logo: imgName }
             try{
-
-                if(Data.name == undefined || imgFile.name == undefined){
-
+                if(Data.name == undefined || Data.logo == undefined){
                     reject({
                         msg: "Data cannot be Created. Please try Again",
                         status: 0
                     })
                 }else{
-                    const saveData = BrandModel(data);
+                    const saveData = BrandModel(Data);
                     saveData.save();
                     resolve({
                         msg: "Data Created Successfully",
@@ -48,7 +40,6 @@ class BrandController{
                 resolve({
                     msg : "Data Found",
                     data : data,
-                    imgBaseUrl: `http://localhost:${process.env.PORT}/Brand/`,
                     status : 1
                 })
             }

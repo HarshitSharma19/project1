@@ -8,19 +8,13 @@ import { AdminLogin } from "./Routes/AdminLogin.js";
 import { UserLogin } from "./Routes/UserLogin.js";
 import { AdminCategoryOperation } from "./Routes/AdminCategoryOperation.js";
 import { AdminProductOperation } from "./Routes/AdminProductOperation.js";
-import { Middleware } from "./Middleware/Middleware.js";
+import { Auth } from "./Middleware/Auth.js";
 import { AdminBrandOperation } from "./Routes/AdminBrandOperation.js"
-/*-----*/
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
-import path from "path";
-/*-----*/
 /*---------------------------------------------------------*/
 /*---------------------------------------------------------*/
 dotenv.config({
     path: "./config.env"
 })
-const __dirname = dirname(fileURLToPath(import.meta.url));
 /*---------------------------------------------------------*/
 let ConnStatus;
 await mongoose.connect(process.env.DB).then(() => {
@@ -38,15 +32,14 @@ if (ConnStatus) {
     App.use(bodyParser.json({
         limit: "50mb"
     }))
-    App.use(Express.static(path.join(__dirname , "Public")))
     App.use(cors({ origin: "*" }))
     App.use("/admin-panel", AdminLogin)
     /*ADMIN LOGIN DONE*/
 
     /*ADMIN CURD OPR*/
-    App.use("/admin-panel",[Middleware.Auth, Middleware.FileStore],AdminCategoryOperation)
-    App.use("/admin-panel",[Middleware.Auth, Middleware.FileStore],AdminProductOperation)
-    App.use("/admin-panel",[Middleware.Auth, Middleware.FileStore],AdminBrandOperation)
+    App.use("/admin-panel/category", Auth , AdminCategoryOperation)
+    App.use("/admin-panel/products", Auth , AdminProductOperation)
+    App.use("/admin-panel/brand", Auth , AdminBrandOperation)
     /*ADMIN CURD OPR*/
 
     /*USER LOGIN PENDING*/

@@ -14,9 +14,10 @@ export default function ViewBrand() {
   const fetchData = async() => {
     await axios.get("http://localhost:4000/admin-panel/brand/view", {
       headers: {
-        authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyIjp7IkVtYWlsIjoiaGFyc2hpdHNoYXJtYTcyNEBnbWFpbC5jb20iLCJQYXNzd29yZCI6ImhhcnNoaXQxMjMifSwiaWF0IjoxNjYxNDkxNTE2fQ.hw5TIPPnTON4IlgzewFl9WioJk9nrfvRF1BDBAqjvTg"
+        authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjIxMjUxODMsIlVzZXIiOnsiRW1haWwiOiJoYXJzaGl0c2hhcm1hQGdtYWlsLmNvbSIsIlBhc3N3b3JkIjoiSGFyc2hpdEAxMjMifSwiaWF0IjoxNjYyMTIxNTgzfQ.onrnWnnn-UtKMQwmXW_gxVlYocxnvB-17YW6UsxiuFE"
       }
     }).then((success) => {
+      console.log(success.data.data)
       setData(success.data.data);
     }).catch((error) => {
       console.log(error)

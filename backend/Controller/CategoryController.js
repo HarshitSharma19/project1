@@ -1,30 +1,18 @@
 /*---------------------------------------------------------*/
 import { CategoryModel } from "../Model/CategoryModel.js";
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
 /*---------------------------------------------------------*/
 class CategoryController {
     /*---------------------------------------------------------*/
-    createCategory = (Data , imgFile) => {
+    createCategory = (Data) => {
         return new Promise((resolve, reject) => {
-            const __dirname = dirname(fileURLToPath(import.meta.url));
-            const imgName = Math.floor(Math.random() * 1000000)+ new Date().getTime() + imgFile.name
-            const destination = __dirname + "/Category" + imgName;
-            const data = { ...Data , image: imgName }
             try{
-                imgFile.mv(destination,(error)=>{
-                    reject({
-                        msg: "Cannot Get File",
-                        status: 0
-                    })
-                })
-                if(Data.name == undefined || imgFile.name == undefined){
+                if(Data.name == undefined || Data.image == undefined){
                     reject({
                         msg: "Data cannot be Created. Please try Again",
                         status: 0
                     })
                 }else{
-                    const saveData = CategoryModel(data);
+                    const saveData = CategoryModel(Data);
                     saveData.save();
                     resolve({
                         msg: "Data Created Successfully",
@@ -43,7 +31,6 @@ class CategoryController {
     getCategory = () => {
         return new Promise(async (resolve, reject) => {
             const data = await CategoryModel.find();
-            // console.log(data)
             if (data.length == 0) {
                 reject({
                     msg: "No Data Found / Empty Data",
@@ -53,7 +40,6 @@ class CategoryController {
                 resolve({
                     msg: "Data Found",
                     data: data,
-                    imgBaseUrl: `http://localhost:${process.env.PORT}/Category/`,
                     status: 1
                 })
             }

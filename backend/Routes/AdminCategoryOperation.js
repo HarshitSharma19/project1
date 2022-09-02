@@ -6,9 +6,8 @@ import { CategoryController } from "../Controller/CategoryController.js";
 const AdminCategoryOperation = Express.Router();
 
 /*Create Opr*/
-AdminCategoryOperation.post("/category/add",async(req , res)=>{
-    const imageFile = req.files.image;
-    await new CategoryController().createCategory(req.body , imageFile).then((success)=>{
+AdminCategoryOperation.post("/add",async(req , res)=>{
+    await new CategoryController().createCategory(req.body).then((success)=>{
         res.send(success).status(200);
     }).catch((error)=>{
         res.send(error).status(400);
@@ -17,7 +16,7 @@ AdminCategoryOperation.post("/category/add",async(req , res)=>{
 /*Create Opr*/
 
 /*READ Opr*/
-AdminCategoryOperation.get("/category/view",async(req , res)=>{
+AdminCategoryOperation.get("/view",async(req , res)=>{
     await new CategoryController().getCategory().then((success)=>{
         res.send(success).status(200)
     }).catch((error)=>{
@@ -27,7 +26,7 @@ AdminCategoryOperation.get("/category/view",async(req , res)=>{
 /*READ Opr*/
 
 /*Delete Opr*/
-AdminCategoryOperation.delete("/category/view/:id",async(req , res)=>{
+AdminCategoryOperation.delete("/view/:id",async(req , res)=>{
     const id = req.params.id;
     await new CategoryController().deleteCategory(id).then((success)=>{
         res.send(success).status(200)
@@ -38,7 +37,7 @@ AdminCategoryOperation.delete("/category/view/:id",async(req , res)=>{
 /*Delete Opr*/
 
 /*Update Opr*/
-AdminCategoryOperation.get("/category/update/:id",async(req , res)=>{
+AdminCategoryOperation.get("/update/:id",async(req , res)=>{
     const id = req.params.id;
     await new CategoryController().updateCategoryGet(id).then((success)=>{
         res.send(success).status(200)
@@ -46,7 +45,7 @@ AdminCategoryOperation.get("/category/update/:id",async(req , res)=>{
         res.send(error).status(400)
     })
 })
-AdminCategoryOperation.put("/category/update/:id",async(req , res)=>{
+AdminCategoryOperation.put("/update/:id",async(req , res)=>{
     const id = req.params.id;
     await new CategoryController().updateCategory(id , req.body).then((success)=>{
         res.send(success).status(200)
@@ -57,7 +56,7 @@ AdminCategoryOperation.put("/category/update/:id",async(req , res)=>{
 /*Update Opr*/
 
 /*Update Status*/
-AdminCategoryOperation.put("/category/view/:id",async(req , res)=>{
+AdminCategoryOperation.put("/view/:id",async(req , res)=>{
     const id = req.params.id;
     await new CategoryController().toggleCategoryStatus(id , req.body).then((success)=>{
         res.send(success).status(200)
@@ -68,7 +67,7 @@ AdminCategoryOperation.put("/category/view/:id",async(req , res)=>{
 /*Update Status*/
 
 /*Update HomePage*/
-AdminCategoryOperation.put("/category/view/:id",async(req , res)=>{
+AdminCategoryOperation.put("/view/:id",async(req , res)=>{
     const id = req.params.id;
     await new CategoryController().toggleCategoryHome(id , req.body).then((success)=>{
         res.send(success).status(200)

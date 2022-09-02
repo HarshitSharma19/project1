@@ -3,15 +3,15 @@ import React from 'react'
 import Button from '../Button.jsx'
 export default function BrandList({name , created , logo , sno ,id , status}) {
   async function Delete(x){
-    await axios.delete(`http://localhost:4000/admin-panel/brand/delete/${x}}`,
+    await axios.delete(`http://localhost:4000/admin-panel/brand/delete/${x}`,
     {
       params:{
         id: x
       },
       headers: {
-          authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyIjp7IkVtYWlsIjoiaGFyc2hpdHNoYXJtYTcyNEBnbWFpbC5jb20iLCJQYXNzd29yZCI6ImhhcnNoaXQxMjMifSwiaWF0IjoxNjYxNDkxNTE2fQ.hw5TIPPnTON4IlgzewFl9WioJk9nrfvRF1BDBAqjvTg",    
-       }
+        authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyIjp7IkVtYWlsIjoiaGFyc2hpdHNoYXJtYTcyNEBnbWFpbC5jb20iLCJQYXNzd29yZCI6ImhhcnNoaXQxMjMifSwiaWF0IjoxNjYxNDkxNTE2fQ.hw5TIPPnTON4IlgzewFl9WioJk9nrfvRF1BDBAqjvTg",    
       }
+    }
     ).then((success)=>{
       console.log(success)
      

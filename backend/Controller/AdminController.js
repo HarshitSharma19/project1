@@ -14,7 +14,6 @@ class AdminController{
                 newData.save();
                 resolve({
                     msg : "User Registerd Successfully",
-                    Name : newData.Name,
                     Email : newData.Email,
                     Password : Data.Password,
                     status : 1

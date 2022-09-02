@@ -5,9 +5,8 @@ import { ProductController } from "../Controller/ProductController.js";
 /*---------------------------------------------------------*/
 const AdminProductOperation = Express.Router();
 /*Create Opr*/
-AdminProductOperation.post("/products/add",async(req , res)=>{
-    const imageFile = req.files.image;
-    await new ProductController().createProduct(req.body , imageFile).then((success)=>{
+AdminProductOperation.post("/add",async(req , res)=>{
+    await new ProductController().createProduct(req.body).then((success)=>{
         res.send(success).status(200);
     }).catch((error)=>{
         res.send(error).status(400);
@@ -16,7 +15,7 @@ AdminProductOperation.post("/products/add",async(req , res)=>{
 /*Create Opr*/
 
 /*READ Opr*/
-AdminProductOperation.get("/products/view",async(req , res)=>{
+AdminProductOperation.get("/view",async(req , res)=>{
     await new ProductController().getProduct().then((success)=>{
         res.send(success).status(200)
     }).catch((error)=>{
@@ -26,7 +25,7 @@ AdminProductOperation.get("/products/view",async(req , res)=>{
 /*READ Opr*/
 
 /*Delete Opr*/
-AdminProductOperation.delete("/products/view/:id",async(req , res)=>{
+AdminProductOperation.delete("/view/:id",async(req , res)=>{
     const id = req.params.id;
     await new ProductController().deleteProduct(id).then((success)=>{
         res.send(success).status(200)
@@ -37,7 +36,7 @@ AdminProductOperation.delete("/products/view/:id",async(req , res)=>{
 /*Delete Opr*/
 
 /*Update Opr*/
-AdminProductOperation.get("/products/update/:id",async(req , res)=>{
+AdminProductOperation.get("/update/:id",async(req , res)=>{
     const id = req.params.id;
     await new ProductController().updateProductGet(id).then((success)=>{
         res.send(success).status(200)
@@ -45,7 +44,7 @@ AdminProductOperation.get("/products/update/:id",async(req , res)=>{
         res.send(error).status(400)
     })
 })
-AdminProductOperation.put("/products/update/:id",async(req , res)=>{
+AdminProductOperation.put("/update/:id",async(req , res)=>{
     const id = req.params.id;
     await new ProductController().updateProduct(id , req.body).then((success)=>{
         res.send(success).status(200)
