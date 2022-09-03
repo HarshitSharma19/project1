@@ -6,8 +6,9 @@ import BrandList from './BrandList.jsx'
 import { Link } from 'react-router-dom'
 export default function ViewBrand() {
   const [data , setData] = useState([]);
+  const [url , setUrl] = useState("")
   const Data = data.map((a, i)=>{
-    return <BrandList id={a._id}  created={a.created_at} status={a.status} key={i} sno={i} name={a.name} logo={a.logo}/>
+    return <BrandList id={a._id}  created={a.created_at} status={a.status} key={i} sno={i} name={a.name} logo={a.logo} url={url}/>
   })
 
   const fetchData = async() => {
@@ -16,6 +17,7 @@ export default function ViewBrand() {
         authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyIjp7IkVtYWlsIjoiaGFyc2hpdHNoYXJtYTcyNEBnbWFpbC5jb20iLCJQYXNzd29yZCI6ImhhcnNoaXQxMjMifSwiaWF0IjoxNjYxNDkxNTE2fQ.hw5TIPPnTON4IlgzewFl9WioJk9nrfvRF1BDBAqjvTg"
       }
     }).then((success) => {
+      setUrl(success.data.imgBaseUrl)
       setData(success.data.data);
     }).catch((error) => {
       console.log(error)

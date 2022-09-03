@@ -20,17 +20,13 @@ const Schema = mongoose.Schema({
         type: Boolean,
         default: false
     },
-    creater_at: {
+    created_at: {
         type: Date,
         default: Date.now()
     },
     updated_at: {
         type: Date,
         default: Date.now()
-    },
-    slug: {
-        type: String,
-        unique: false
     }
 })
 /*---------------------------------------------------------*/

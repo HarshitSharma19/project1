@@ -22,7 +22,6 @@ export default function AdminApp() {
       <Route path ='/admin-panel/products/view' element={<AdminPanel com={<ViewProducts/>}/>}/>
       <Route path ='/admin-panel/brand/add' element={<AdminPanel com={<AddBrand/>}/>}/>
       <Route path ='/admin-panel/brand/view' element={<AdminPanel com={<ViewBrand/>}/>}/>
-     
     </Routes>
     </>
     )

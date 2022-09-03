@@ -5,8 +5,9 @@ import { BrandController } from "../Controller/BrandController.js";
 
 const AdminBrandOperation = Express.Router();
 /*Create Opr*/
-AdminBrandOperation.post("/brand/add",async(req , res)=>{
-    const imageFile = req.files.image;
+AdminBrandOperation.post("/add",async(req , res)=>{
+    const imageFile = req.files.logo;
+    // console.log(imageFile)
     await new BrandController().createBrand(req.body , imageFile).then((success)=>{
         res.send(success).status(200);
     }).catch((error)=>{
@@ -16,7 +17,7 @@ AdminBrandOperation.post("/brand/add",async(req , res)=>{
 /*Create Opr*/
 
 /*READ Opr*/
-AdminBrandOperation.get("/brand/view",async(req , res)=>{
+AdminBrandOperation.get("/view",async(req , res)=>{
     await new BrandController().getBrand().then((success)=>{
         res.send(success).status(200)
     }).catch((error)=>{
@@ -26,7 +27,7 @@ AdminBrandOperation.get("/brand/view",async(req , res)=>{
 /*READ Opr*/
 
 /*Delete Opr*/
-AdminBrandOperation.delete("/brand/view/:id",async(req , res)=>{
+AdminBrandOperation.delete("/view/:id",async(req , res)=>{
     const id = req.params.id;
     await new BrandController().deleteBrand(id).then((success)=>{
         res.send(success).status(200)
@@ -37,7 +38,7 @@ AdminBrandOperation.delete("/brand/view/:id",async(req , res)=>{
 /*Delete Opr*/
 
 /*Update Opr*/
-AdminBrandOperation.get("/brand/update/:id",async(req , res)=>{
+AdminBrandOperation.get("/update/:id",async(req , res)=>{
     const id = req.params.id;
     await new BrandController().updateBrandGet(id).then((success)=>{
         res.send(success).status(200)
@@ -45,7 +46,7 @@ AdminBrandOperation.get("/brand/update/:id",async(req , res)=>{
         res.send(error).status(400)
     })
 })
-AdminBrandOperation.put("/brand/update/:id",async(req , res)=>{
+AdminBrandOperation.put("/update/:id",async(req , res)=>{
     const id = req.params.id;
     await new BrandController().updateBrand(id , req.body).then((success)=>{
         res.send(success).status(200)
@@ -56,7 +57,7 @@ AdminBrandOperation.put("/brand/update/:id",async(req , res)=>{
 /*Update Opr*/
 
 /*Update Status*/
-AdminBrandOperation.put("/brand/view/:id",async(req , res)=>{
+AdminBrandOperation.put("/view/:id",async(req , res)=>{
     const id = req.params.id;
     await new BrandController().toggleBrandStatus(id , req.body).then((success)=>{
         res.send(success).status(200)

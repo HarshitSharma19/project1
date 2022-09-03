@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React from 'react'
 import SwitchBtn from '../SwitchBtn.jsx'
-export default function BrandList({name , created , logo , sno, status ,id}) {
+export default function BrandList({name , created , logo , sno, status ,id ,url}) {
   function Delete(x){
     axios.delete(`http://localhost:400/admin-panel/brand/delete`,
     {
@@ -26,9 +26,9 @@ export default function BrandList({name , created , logo , sno, status ,id}) {
             <thead></thead>
           <tbody>
             <tr className='border-b'>
-              <td className='w-11'>{sno}</td>
+              <td className='w-11'>{sno+1}</td>
               <td className='w-[151px]'>{name}</td>
-              <td  className='w-[260px] flex justify-center items-center'><img src={logo} alt=""   className='mb-2 w-[115px] h-[75px]'/></td>
+              <td  className='w-[260px] flex justify-center items-center'><img src={url+logo} alt=""   className='mb-2 w-[115px] h-[75px]'/></td>
               <td className='w-[138px]'><SwitchBtn flag={status} /></td>
               <td className='w-[240px]'>{created}</td>
               <td  className='w-[160px] flex justify-center items-center relative bottom-7'>

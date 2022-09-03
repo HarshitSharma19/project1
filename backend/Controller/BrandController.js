@@ -1,15 +1,15 @@
 /*---------------------------------------------------------*/
 import { BrandModel } from "../Model/BrandModel.js";
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { dirName } from "../dirName.js";
+import path from "path";
 /*---------------------------------------------------------*/
 class BrandController{
     /*---------------------------------------------------------*/
     createBrand = (Data ,imgFile)=>{
         return new Promise((resolve , reject)=>{
-            const __dirname = dirname(fileURLToPath(import.meta.url));
-            const imgName = Math.floor(Math.random() * 1000000)+ new Date().getTime() + imgFile.name
-            const destination = __dirname + "/Brand" + imgName;
+            const Dir1 = path.join(dirName , "Public/Brand/")
+            const imgName = Math.floor( Math.random() *1000000) + new Date().getTime() + imgFile.name
+            const destination = Dir1 + imgName;
             const data = { ...Data , logo: imgName }
             try{
                 imgFile.mv(destination,(error)=>{

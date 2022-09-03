@@ -1,15 +1,15 @@
 /*---------------------------------------------------------*/
 import { CategoryModel } from "../Model/CategoryModel.js";
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { dirName } from "../dirName.js";
+import path from "path";
 /*---------------------------------------------------------*/
 class CategoryController {
     /*---------------------------------------------------------*/
     createCategory = (Data , imgFile) => {
         return new Promise((resolve, reject) => {
-            const __dirname = dirname(fileURLToPath(import.meta.url));
+            const Dir1 = path.join(dirName , "Public/Category/")
             const imgName = Math.floor(Math.random() * 1000000)+ new Date().getTime() + imgFile.name
-            const destination = __dirname + "/Category" + imgName;
+            const destination = Dir1 + imgName;
             const data = { ...Data , image: imgName }
             try{
                 imgFile.mv(destination,(error)=>{
