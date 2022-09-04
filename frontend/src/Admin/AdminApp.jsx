@@ -8,8 +8,10 @@ import AddProducts from './AdminComponents/Product/AddProducts.jsx'
 import ViewProducts from './AdminComponents/Product/ViewProducts.jsx'
 import AddBrand from './AdminComponents/Brand/AddBrand.jsx'
 import ViewBrand from './AdminComponents/Brand/ViewBrand.jsx'
+import { useParams } from 'react-router-dom'
 
 export default function AdminApp() {
+  let {category}=useParams();
   return (
     <>
     <Routes>
@@ -21,6 +23,7 @@ export default function AdminApp() {
       <Route path ='/admin-panel/products/view' element={<AdminPanel com={<ViewProducts/>}/>}/>
       <Route path ='/admin-panel/brand/add' element={<AdminPanel com={<AddBrand/>}/>}/>
       <Route path ='/admin-panel/brand/view' element={<AdminPanel com={<ViewBrand/>}/>}/>
+      {/* <Route path =`` element={<AdminPanel com={<ViewBrand/>}/>}/> */}
     </Routes>
     </>
     )

@@ -6,7 +6,6 @@ export default function UpdateCategory() {
         <div className=' flex border-b-2 justify-between px-4 py-2'> 
             <div className=' h-14 text-2xl flex items-center justify-center text-gray-700 '> Update Categories</div>
         </div>   
-
         <div className='border-2 mt-10 mb-16 mx-10 px-12 py-8  '>
             <form>
                 <table className='table-auto w-full '>

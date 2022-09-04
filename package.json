@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/HarshitSharma19/project1#readme",
   "dependencies": {
+    "@heroicons/react": "^2.0.10",
     "concurrently": "^7.3.0"
   }
 }
