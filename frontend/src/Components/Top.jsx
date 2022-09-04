@@ -10,6 +10,7 @@ return (
 
         <div className="flex justify-between" style={{background: "#FFFFFF 0% 0% no-repeat padding-box",opacity: "1"}}>
             <div>
+                
                 <div className="dropdown inline-block ">
                     <button
                         className="bg-white text-black-700 font-semibold py-2 px-4 rounded inline-flex items-center">
@@ -37,6 +38,7 @@ return (
                     </ul>
                 </div>
             </div>
+            
             <div className=' justify-between flex'>
                 <div className='p-3 flex cursor-pointer'>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24"
@@ -50,7 +52,7 @@ return (
                     </> 
                     : 
                     <>
-                        <p><span className='mr-5'> <Link to="/Login" >Login</Link></span><span><Link to="/signup" >SignUp</Link></span></p>
+                        <p><span className='mr-5'> <Link to="/user-login" >Login</Link></span><span><Link to="/user-signup" >SignUp</Link></span></p>
                     </>
                     }
                     
