@@ -12,7 +12,7 @@ AdminProductOperation.post("/add",async(req , res)=>{
     }).catch((error)=>{
         res.send(error).status(400);
     })
-})
+}) 
 /*Create Opr*/
 
 /*READ Opr*/

@@ -10,7 +10,7 @@ const Schema = mongoose.Schema({
     },
     image: {
         type: String,
-        require: true
+        require: true 
     },
     status: {
         type: Boolean,

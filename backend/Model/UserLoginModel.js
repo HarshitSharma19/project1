@@ -8,7 +8,7 @@ const Schema = mongoose.Schema({
         require: true
     },
     Contact : {
-        type: Number,
+        type: Number, 
         length: 13,
         require: true,
         unique: true

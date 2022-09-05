@@ -10,7 +10,7 @@ AdminLogin.post("/register",async(req , res)=>{
     }).catch((error)=>{
         res.send(error).status(400)
     })
-})
+}) 
 AdminLogin.post("/login", async(req , res)=>{
     await new AdminController().login(req.body).then((success)=>{
         res.send(success).status(200)
