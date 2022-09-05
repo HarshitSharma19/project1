@@ -12,9 +12,9 @@ AdminBrandOperation.post("/add",async(req , res)=>{
         res.send(success).status(200);
     }).catch((error)=>{
         res.send(error).status(400);
-    })
+    })  
 })
-/*Create Opr*/
+/*Create Opr*/  
 
 /*READ Opr*/
 AdminBrandOperation.get("/view",async(req , res)=>{

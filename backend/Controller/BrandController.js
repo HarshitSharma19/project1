@@ -42,7 +42,7 @@ class BrandController{
     /*---------------------------------------------------------*/
     getBrand = ()=>{
         return new Promise(async(resolve , reject)=>{
-            const data = await BrandModel.find();
+            const data = await BrandModel.find(); 
             if(data.length == 0){
                 reject({
                     msg: "No Data Found / Empty Data",
