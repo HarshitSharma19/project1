@@ -25,6 +25,8 @@ import Navbar from "./Components/Navbar.jsx"
 import Registration from "./Pages/Registeration.jsx";
 import UserLoginPage from "./Pages/Login.jsx";
 import AboutUs from "./Pages/About_Us.jsx" 
+import FAQ from "./Pages/FAQ.jsx"
+
 
   export default function Home() {
     let { pathname } = useLocation();
@@ -59,12 +61,14 @@ import AboutUs from "./Pages/About_Us.jsx"
     <Route element={<Offers />} path="/offers"/>
     <Route element={<Registration />} path="/user-signup" />
     <Route element={<UserLoginPage />} path="/user-login" />    
-    <Route element={<PrivacyPolicy />} path="/privacypolicy" />    
+    <Route element={<PrivacyPolicy />} path="/privacypolicy" /> 
+    <Route element={<FAQ/>} path="/faq"/>
+    
 
   </Routes>
   {pathname !== "/user-login" && pathname !== "/user-signup" ? (
         <>
-         {pathname !== "/aboutus"  && pathname !== "/privacypolicy"  && pathname !== "/termsconditions"?(<>
+         {pathname !== "/aboutus"  && pathname !== "/privacypolicy"  && pathname !== "/termsconditions" && pathname !== "/faq"?(<>
             
           <AdvCard />
           <FooterDetails />

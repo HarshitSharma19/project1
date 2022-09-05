@@ -3,6 +3,7 @@ import visa from '../Images/visa.svg'
 import wester from '../Images/Western_union.svg'
 import master from '../Images/master_card.svg'
 import paypal from '../Images/Paypal.svg'
+import { Link } from 'react-router-dom'
 
 
 import React from 'react'
@@ -20,7 +21,9 @@ return (
             <li className="text-m py-1">AboutUs</li>
             <li className="text-m py-1">Information</li>
             <li className="text-m py-1">Privacy Policy</li>
-            <li className="text-m py-1">Terms & Conditions</li>
+            <Link to="/termsconditions"><li className="text-m py-1">Terms & Conditions</li></Link>
+            <Link to="/faq"><li className="text-m py-1">FAQ</li></Link>
+
           </ul>
         </div>
         <div className='mr-5'>
@@ -30,6 +33,7 @@ return (
             <li className="text-m py-1">Information</li>
             <li className="text-m py-1">Privacy Policy</li>
             <li className="text-m py-1">Terms & Conditions</li>
+            <Link to="/faq"><li className="text-m py-1">FAQ</li></Link>
           </ul>
         </div>
 
@@ -40,6 +44,7 @@ return (
             <li className="text-m py-1">Information</li>
             <li className="text-m py-1">Privacy Policy</li>
             <li className="text-m py-1">Terms & Conditions</li>
+            <Link to="/faq"><li className="text-m py-1">FAQ</li></Link>
           </ul>
         </div>
 
@@ -51,6 +56,7 @@ return (
             <li className="text-m py-1">Information</li>
             <li className="text-m py-1">Privacy Policy</li>
             <li className="text-m py-1">Terms & Conditions</li>
+            <Link to="/faq"><li className="text-m py-1">FAQ</li></Link>
           </ul>
 
         </div>
@@ -62,6 +68,7 @@ return (
             <li className="text-m py-1">Information</li>
             <li className="text-m py-1">Privacy Policy</li>
             <li className="text-m py-1">Terms & Conditions</li>
+            <Link to="/faq"><li className="text-m py-1">FAQ</li></Link>
           </ul>
         </div>
 
@@ -72,6 +79,7 @@ return (
             <li className="text-m py-1">Information</li>
             <li className="text-m py-1">Privacy Policy</li>
             <li className="text-m py-1">Terms & Conditions</li>
+            <Link to="/faq"><li className="text-m py-1">FAQ</li></Link>
           </ul>
         </div>
       </div>
