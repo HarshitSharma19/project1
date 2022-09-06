@@ -23,7 +23,7 @@ const Navbar = () => {
           <img src={Logo} alt="" />
         </div>
 
-      <div className='Navbar bg-rose-100	  md:font-bold  ' >
+      <div className='Navbar bg-rose-100	hidden md:block  md:font-bold  ' >
         <ul className='flex  md:flex justify-center' >
           <li className='p-6 cursor-pointer  hover:-translate-y-1 hover:scale-110 duration-300  hover:text-blue-500 '><Link to="/"> HOME</Link></li>
             <li className='p-6 cursor-pointer  hover:-translate-y-1 hover:scale-110 duration-300 border relative ' >
@@ -78,7 +78,7 @@ const Navbar = () => {
         <ul className={
           !nav
             ? 'hidden'
-            : 'absolute top-0 left-0 w-full h-screen bg-gradient-to-r from-green-400 to-blue-500 flex flex-col justify-center  items-center'
+            : 'absolute top-0 left-0 w-full h-screen  flex flex-col justify-center  items-center'
         }>
           <li className='p-5 text-lg font-bold border-b border-black'>HOME</li>
           <li className='p-5 text-lg font-bold border-b border-black'>OFFER</li>
