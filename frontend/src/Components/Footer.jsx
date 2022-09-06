@@ -3,8 +3,8 @@ import visa from '../Images/visa.svg'
 import wester from '../Images/Western_union.svg'
 import master from '../Images/master_card.svg'
 import paypal from '../Images/Paypal.svg'
+import { Link } from 'react-router-dom'
 
-import { Link } from 'react-router-dom';
 
 import React from 'react'
 
@@ -12,16 +12,18 @@ export default function Footer() {
 return (
 <>
   <div className='border-b-4'>
-    <Container> 
+    <Container>
 
       <div className=" flex-none text-center md:flex md:justify-between my-5">
         <div className='mr-5'>
           <ul>
-            <Link to=""></Link><li className='text-2xl font-bold pb-4'>Information</li>
-            <Link to="/aboutus"><li className="text-m py-1">AboutUs</li></Link>
+            <li className='text-2xl font-bold pb-4'>Information</li>
+            <li className="text-m py-1">AboutUs</li>
             <li className="text-m py-1">Information</li>
-            <Link to="/privacypolicy"><li className="text-m py-1">Privacy Policy</li></Link>
-            <li className="text-m py-1">Terms & Conditions</li>
+            <li className="text-m py-1">Privacy Policy</li>
+            <Link to="/termsconditions"><li className="text-m py-1">Terms & Conditions</li></Link>
+            <Link to="/faq"><li className="text-m py-1">FAQ</li></Link>
+
           </ul>
         </div>
         <div className='mr-5'>
@@ -31,6 +33,7 @@ return (
             <li className="text-m py-1">Information</li>
             <li className="text-m py-1">Privacy Policy</li>
             <li className="text-m py-1">Terms & Conditions</li>
+            <Link to="/faq"><li className="text-m py-1">FAQ</li></Link>
           </ul>
         </div>
 
@@ -41,6 +44,7 @@ return (
             <li className="text-m py-1">Information</li>
             <li className="text-m py-1">Privacy Policy</li>
             <li className="text-m py-1">Terms & Conditions</li>
+            <Link to="/faq"><li className="text-m py-1">FAQ</li></Link>
           </ul>
         </div>
 
@@ -52,6 +56,7 @@ return (
             <li className="text-m py-1">Information</li>
             <li className="text-m py-1">Privacy Policy</li>
             <li className="text-m py-1">Terms & Conditions</li>
+            <Link to="/faq"><li className="text-m py-1">FAQ</li></Link>
           </ul>
 
         </div>
@@ -63,6 +68,7 @@ return (
             <li className="text-m py-1">Information</li>
             <li className="text-m py-1">Privacy Policy</li>
             <li className="text-m py-1">Terms & Conditions</li>
+            <Link to="/faq"><li className="text-m py-1">FAQ</li></Link>
           </ul>
         </div>
 
@@ -73,6 +79,7 @@ return (
             <li className="text-m py-1">Information</li>
             <li className="text-m py-1">Privacy Policy</li>
             <li className="text-m py-1">Terms & Conditions</li>
+            <Link to="/faq"><li className="text-m py-1">FAQ</li></Link>
           </ul>
         </div>
       </div>
