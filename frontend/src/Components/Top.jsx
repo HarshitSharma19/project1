@@ -10,6 +10,7 @@ return (
 
         <div className="flex justify-between" style={{background: "#FFFFFF 0% 0% no-repeat padding-box",opacity: "1"}}>
             <div>
+                
                 <div className="dropdown inline-block ">
                     <button
                         className="bg-white text-black-700 font-semibold py-2 px-4 rounded inline-flex items-center">
@@ -37,6 +38,7 @@ return (
                     </ul>
                 </div>
             </div>
+            
             <div className=' justify-between flex'>
                 <div className='p-3 flex cursor-pointer'>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24"
@@ -50,10 +52,9 @@ return (
                     </> 
                     : 
                     <>
-                        <p><span className='mr-5'> <Link to="/Login" >Login</Link></span><span><Link to="/signup" >SignUp</Link></span></p>
+                        <p><span className='mr-5'> <Link to="/user-login" >Login</Link></span><span><Link to="/user-signup" >SignUp</Link></span></p>
                     </>
                     }
-                    
                 </div>
                 <div className='p-3 flex cursor-pointer'>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24"
@@ -62,7 +63,6 @@ return (
                             d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
                     <Link to="/cart">Items</Link>
-                    
                 </div>
                 <div className='p-3 cursor-pointer'>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24"

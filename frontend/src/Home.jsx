@@ -15,16 +15,16 @@ import Store from "./Pages/Store.jsx"
 import PrivacyPolicy from "./Pages/PrivacyPolicy.jsx"
 import Profile from "./Pages/Profile.jsx"
 import Tablets from "./Pages/Tablet.jsx"
-// import TermConditions from "./Pages/TermConditions.jsx"
+import TermConditions from "./Pages/TermConditions.jsx"
 // import Watches from "./Pages/Watches.jsx"
 import AdvCard from "./Components/AdvCard.jsx"
 import FooterDetails from './Components/FooterDetails'
 import Footer from "./Components/Footer.jsx"
 import Top from "./Components/Top.jsx"
 import Navbar from "./Components/Navbar.jsx"
-// import Registration from "./Section/Registration";
-// import UserLoginPage from "./Section/UserLoginPage";
-
+import Registration from "./Pages/Registeration.jsx";
+import UserLoginPage from "./Pages/Login.jsx";
+import AboutUs from "./Pages/About_Us.jsx" 
 
   export default function Home() {
     let { pathname } = useLocation();
@@ -32,9 +32,10 @@ import Navbar from "./Components/Navbar.jsx"
     return (
       <>
         <ScrollToTop />
-        {pathname !== "/Login" && pathname !== "/signup" ? (
+        <Top />
+        {pathname !== "/user-login" && pathname !== "/user-signup" && pathname !== "/aboutus"  && pathname !== "/termsconditions" && pathname !== "/privacypolicy" ? (
           <>
-            <Top />
+            
             <Navbar />
           </>
         ) : (
@@ -42,6 +43,7 @@ import Navbar from "./Components/Navbar.jsx"
         )}
   <Routes>
     <Route path="*" element={<Error />} />
+    <Route path="/aboutus" element={<AboutUs />} />
     <Route element={<MainPage />} path="/"/>
     <Route element={<Mobiles />} path="/mobiles"/>
     <Route element={<Store />} path="/store"/>
@@ -51,17 +53,26 @@ import Navbar from "./Components/Navbar.jsx"
     <Route element={<PrivacyPolicy />} path="/privacypolicy"/>
     <Route element={<Profile />} path="/profile"/>
     <Route element={<Tablets />} path="/tablets"/>
-    {/* <Route element={<TermConditions />} path="/termsconditions"/>
-    <Route element={<Watches />} path="/watches"/> */}
+     <Route element={<TermConditions />} path="/termsconditions"/>
+    {/*<Route element={<Watches />} path="/watches"/> */}
     <Route element={<Checkout />} path="/checkout"/>
     <Route element={<Offers />} path="/offers"/>
-    {/* <Route element={<Registration />} path="/signup" />
-    <Route element={<UserLoginPage />} path="/login" />        */}
+    <Route element={<Registration />} path="/user-signup" />
+    <Route element={<UserLoginPage />} path="/user-login" />    
+    <Route element={<PrivacyPolicy />} path="/privacypolicy" />    
+
   </Routes>
-  {pathname !== "/Login" && pathname !== "/signup" ? (
+  {pathname !== "/user-login" && pathname !== "/user-signup" ? (
         <>
+         {pathname !== "/aboutus"  && pathname !== "/privacypolicy"  && pathname !== "/termsconditions"?(<>
+            
           <AdvCard />
           <FooterDetails />
+          </>
+        ) : (
+          ""
+        )}
+         
           <Footer />
         </>
       ) : (

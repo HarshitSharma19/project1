@@ -4,6 +4,7 @@ import wester from '../Images/Western_union.svg'
 import master from '../Images/master_card.svg'
 import paypal from '../Images/Paypal.svg'
 
+import { Link } from 'react-router-dom';
 
 import React from 'react'
 
@@ -11,15 +12,15 @@ export default function Footer() {
 return (
 <>
   <div className='border-b-4'>
-    <Container>
+    <Container> 
 
       <div className=" flex-none text-center md:flex md:justify-between my-5">
         <div className='mr-5'>
           <ul>
-            <li className='text-2xl font-bold pb-4'>Information</li>
-            <li className="text-m py-1">AboutUs</li>
+            <Link to=""></Link><li className='text-2xl font-bold pb-4'>Information</li>
+            <Link to="/aboutus"><li className="text-m py-1">AboutUs</li></Link>
             <li className="text-m py-1">Information</li>
-            <li className="text-m py-1">Privacy Policy</li>
+            <Link to="/privacypolicy"><li className="text-m py-1">Privacy Policy</li></Link>
             <li className="text-m py-1">Terms & Conditions</li>
           </ul>
         </div>
